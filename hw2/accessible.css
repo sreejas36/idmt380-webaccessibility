@@ -1,0 +1,637 @@
+:root {
+
+    /* accents */
+    --primary-light: #E698BC;
+    --primary-accent: #943E65;
+    --primary-dark: #7A224A;
+
+    --secondary-light: #FFFCF8;
+    --secondary-accent: #FFF9F3;
+    --secondary-dark: #FFEAD6;
+
+    --tertiary-light: #EDE2FF;
+    --tertiary-accent: #E0CEFF;
+    --tertiary-dark: #9E82CF;
+
+
+    /* neutral */
+    --dark-text: #000000;
+    --light-background: #FFF9F3;
+    --light-text: #FFF9F3;
+    --dark-background: #943E65;
+
+
+    /* status */
+    --success-light:#A8E79B;
+    --success-med: #65BE5B;
+    --success-dark: #3C8C33;
+
+    --error-light:#E98080;
+    --error-med: #F45A5A;
+    --error-dark: #C42D2D;
+
+    --cutive: "Cutive", serif;
+    --cantarell: "Cantarell", sans-serif;
+    --cormorant-upright: "Cormorant Upright", serif;
+}
+
+
+.cutive-regular {
+    font-family: "Cutive", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cormorant-upright-regular {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.cormorant-upright-medium {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.cormorant-upright-semibold {
+    font-family: "Cormorant Upright", serif;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.cantarell-regular {
+    font-family: "Cantarell", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+body {
+    background-color: var(--light-background)
+    
+}
+
+main {
+    color: var(--dark-text);
+}
+
+
+/* Font Sizes */
+h1 {
+    font-family: var(--cutive);
+    font-size: 32px;
+    font-weight: 500;
+}
+
+h2 {
+    font-family: var(--cormorant-upright);
+    font-size: 40px;
+    font-weight: 600;
+}
+
+h3 {
+    font-family: var(--cormorant-upright);
+    font-size: 28px;
+    font-weight: 600;
+}
+
+h4 {
+    font-family: var(--cormorant-upright);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+h5 {
+    font-family: var(--cutive);
+    font-size: 24px;
+    font-weight: 500;
+}
+
+
+p {
+    font-family: var(--cantarell);
+    font-size: 18px;
+    font-weight: 500;
+}
+
+
+li {
+    font-family: var(--cantarell);
+    font-weight: 500;
+}
+
+
+/* SECTIONS */
+
+/* Intro Section */
+.intro-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 3rem 4rem 4rem 4rem;
+    gap: 2rem;
+    max-width: 1200px;
+    align-self: center;
+    margin: 0 auto;
+}
+
+.intro-text {
+    flex: 1;
+}
+
+.intro-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 12px;
+}
+
+@media (max-width: 768px) {
+    .intro-section {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+
+.cs-logo {
+position: sticky;
+}
+
+/* Nav Bar Layout */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+
+
+/* ---------- Responsive Navbar (No JS) ---------- */
+
+/* hide checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* hamburger base */
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 10px;
+    z-index: 1001; /* keep above menu */
+}
+
+.hamburger span {
+    width: 40px;
+    height: 2px;
+    background-color: var(--black);
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+/* Default desktop menu */
+.menu {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+.hamburger {
+    display: flex;
+}
+
+  /* Stack menu vertically when toggled */
+.menu {
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background-color: var(--cream);
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    z-index: 1000;
+}
+
+  /* Show menu when checkbox is checked */
+.menu-toggle:checked + .hamburger + .menu {
+    max-height: 500px;
+    padding: 5rem 0;
+}
+
+  /* Animate hamburger into “X” */
+.menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: rotate(45deg) translateY(16px);
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: rotate(-45deg) translateY(-16px);
+}
+
+  /* Optional: hide decorative image on desktop */
+.menu-image {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.menu-image img {
+    max-width: 120px;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+}
+
+/* .menu {
+    list-style: none;
+    display: flex;
+    align-items: flex-end;
+    gap: 1.5rem;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+
+    li {
+        font-size: 24px;
+
+    }
+}
+*/
+
+.menu a {
+    text-decoration: none;
+    color: var(--black);
+    font-family: var(--cormorant-upright);
+    font-weight: 00;
+}
+
+.menu a:hover {
+    color: var(--fuchsia);
+    transform: scale(1.5);
+}
+
+
+
+/* Case Study Cards */
+.case-study-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 4rem;
+}
+
+
+.case-study-card {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    aspect-ratio: 1200 / 700;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+.inner-case-study-image {
+    position: relative;
+    width: 100%;
+    max-width: 1000px;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    padding: 1rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+#petes-little-lunch-box {
+        background: linear-gradient(180deg, #FFEEDC 31%, #C73715 97%);
+}
+
+#cvs-microinteractions {
+        background: linear-gradient(164deg, #FFFFFF 25%, #CC0000 97%);
+}
+
+#sunset-cove {
+        background: linear-gradient(180deg, #FF7699 0%, #ACB0E8 97%);
+}
+
+/* Hover enlarge effect */
+.case-study-card:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+}
+
+/* Info section: text + logo */
+.cs-card-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    flex-wrap: wrap;
+    /* margin-bottom: 2rem; */
+}
+
+.cs-text {
+    display: block;
+}
+
+.cs-text h1 {
+    font-family: "Cutive", serif;
+    text-align: left;
+    margin-bottom: 0.25rem;
+    color: #1a1a1a;
+}
+
+.cs-text h3 {
+    font-family: "Cormorant Upright", serif;
+    font-size: 22px;
+    font-weight: 400;
+    color: #333;
+    max-width: 500px;
+    margin: 0;
+    text-align: left;
+}
+
+.cs-petes-logo {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+/* .cs-logo {
+
+} */
+
+.cs-featured-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cs-featured-image img {
+    max-width: 700px;
+    transition: transform 0.4s ease;
+}
+
+/* Slight zoom of image on hover */
+.case-study-card:hover .cs-featured-image img {
+    transform: scale(1.05);
+}
+
+
+/* Pill tags */
+.cs-pill-tags {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: auto;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+}
+
+.cs-pill-tags span {
+    display: inline-block; /* ensures width wraps content */
+    font-family: "Cormorant Upright", sans-serif;
+    border: 1px solid #333;
+    border-radius: 999px;
+    padding: 0.25rem 0.5rem; /* smaller padding for tighter fit */
+    background: var(--cream);
+    /* font-size: 0.9rem; */
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* prevents text from breaking lines */
+}
+
+.cs-pill-tags span:hover {
+    background: #943E65;
+    color: var(--cream);
+    border-color: var(--fuchsia);
+}
+
+/* FOOTER */
+footer {
+    color: var(--cream);
+    background-color: var(--fuchsia);
+    padding: 5rem 4rem 2rem 4rem;
+    margin-top: 2rem;
+}
+
+.footer-message {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer-message h1{
+    margin: 0;
+}
+
+.connection {
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer-links {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-end;
+}
+.footer-links a:hover {
+    transform: scale(1);
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+.links {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--cream);
+}
+
+.links a:hover {
+    color: var(--fuchsia);
+}
+
+.links h4{
+    margin: 0;
+}
+
+
+
+.copyright {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--cantarell);
+    padding-top: 2rem;
+}
+
+
+/* Pill tags */
+.cs-pill-tags {
+    display: flex;
+    flex-direction: column; /* stack vertically */
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 3px;
+    margin-top: auto;
+    position: absolute;
+    top: 80%;
+    right: 5%;
+}
+
+.cs-pill-tags span {
+    display: inline-block; /* ensures width wraps content */
+    font-family: "Cormorant Upright", sans-serif;
+    border: 1px solid #333;
+    border-radius: 999px;
+    padding: 0.25rem 0.5rem; /* smaller padding for tighter fit */
+    background: var(--cream);
+    /* font-size: 0.9rem; */
+    color: #1a1a1a;
+    transition: all 0.3s ease;
+    white-space: nowrap; /* prevents text from breaking lines */
+}
+
+.cs-pill-tags span:hover {
+    background: #943E65;
+    color: var(--cream);
+    border-color: var(--fuchsia);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------- Responsive Tweaks ---------- */
+@media (max-width: 1200px) {
+    .case-study-card {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .cs-card-info {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cs-text h1 {
+        font-size: 1.5rem;
+    }
+
+    .cs-text h3 {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+
+    .cs-logo img {
+        width: 100px;
+    }
+
+    .cs-featured-image img {
+        width: 90%;
+    }
+}
+
+@media (max-width: 600px) {
+    .case-study-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .cs-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .cs-text h3 {
+        font-size: 0.95rem;
+    }
+
+    .cs-pill-tags span {
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+    }
+    .connection {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-links {
+        flex-direction: row;
+    }
+
+    .case-study-section {
+        height: 100%;
+    }
+}
+
+.cs-featured-image img,
+.cs-logo img,
+.cs-petes-logo img {
+    width: 100%;
+  height: auto;     /* maintain aspect ratio */
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .case-study-card {
+    max-width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .case-study-card {
+    max-width: 100%;
+    }
+}
