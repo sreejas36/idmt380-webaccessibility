@@ -68,8 +68,8 @@
 
 
 body {
-    background-color: var(--light-background)
-    
+    background-color: var(--light-background);
+    margin: 0;
 }
 
 main {
@@ -380,7 +380,7 @@ nav {
     font-family: "Cormorant Upright", serif;
     font-size: 22px;
     font-weight: 400;
-    color: #333;
+    color: var(--dark-text);
     max-width: 500px;
     margin: 0;
     text-align: left;
@@ -429,10 +429,10 @@ nav {
 .cs-pill-tags span {
     display: inline-block; /* ensures width wraps content */
     font-family: "Cormorant Upright", sans-serif;
-    border: 1px solid #333;
+    border: 1px solid var(--dark-text);
     border-radius: 999px;
     padding: 0.25rem 0.5rem; /* smaller padding for tighter fit */
-    background: var(--cream);
+    background: var(--light-background);
     /* font-size: 0.9rem; */
     color: #1a1a1a;
     transition: all 0.3s ease;
@@ -441,14 +441,14 @@ nav {
 
 .cs-pill-tags span:hover {
     background: #943E65;
-    color: var(--cream);
-    border-color: var(--fuchsia);
+    color: var(--light-background);
+    border-color: var(--primary-accent);
 }
 
 /* FOOTER */
 footer {
-    color: var(--cream);
-    background-color: var(--fuchsia);
+    color: var(--light-text);
+    background-color: var(--primary-accent);
     padding: 5rem 4rem 2rem 4rem;
     margin-top: 2rem;
 }
@@ -491,7 +491,7 @@ footer {
 }
 
 .links a:hover {
-    color: var(--fuchsia);
+    color: var(--primary-accent);
 }
 
 .links h4{
@@ -528,7 +528,7 @@ footer {
     border: 1px solid #333;
     border-radius: 999px;
     padding: 0.25rem 0.5rem; /* smaller padding for tighter fit */
-    background: var(--cream);
+    background: var(--light-background);
     /* font-size: 0.9rem; */
     color: #1a1a1a;
     transition: all 0.3s ease;
@@ -537,8 +537,8 @@ footer {
 
 .cs-pill-tags span:hover {
     background: #943E65;
-    color: var(--cream);
-    border-color: var(--fuchsia);
+    color: var(--light-text);
+    border-color: var(--dark-background);
 }
 
 
@@ -633,5 +633,38 @@ footer {
 @media (max-width: 480px) {
     .case-study-card {
     max-width: 100%;
+    }
+}
+
+
+
+@media (max-width: 600px) {
+    .case-study-card {
+        padding: 1.5rem;
+        border-radius: 20px;
+    }
+
+    .cs-text h1 {
+        font-size: 1.3rem;
+    }
+
+    .cs-text h3 {
+        font-size: 0.95rem;
+    }
+
+    .cs-pill-tags span {
+        font-size: 0.85rem;
+        padding: 0.4rem 1rem;
+    }
+    .connection {
+        display: flex;
+        flex-direction: column;
+    }
+    .footer-links {
+        flex-direction: row;
+    }
+
+    .case-study-section {
+        height: 100%;
     }
 }
