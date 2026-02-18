@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreeja Satish's Portfolio</title>
-    <link rel="shortcut icon" type="image/webp" href="assets/favicon.png">
-    <link rel="stylesheet" href="accessible.css">
+    <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/accessible.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
@@ -15,34 +15,36 @@
 <!-- IDM T380 Web Accessibility -->
 
 
-<!-- notes: took out href for links so they aren't clickable or moveable
+<!-- notes: adjusted  href for links so they aren't clickable or moveable
     email in footer isn't doing a popup? it just opens to a blank popup -->
+
+    <!-- need to adjust mobile and make cards longer to avoid crunches -->
 
 <body>
     <a href="#main" class="skip-link">
-        Skip to main content
+        Skip to main content 
         </a>
 
 <header>
     <nav>
     <a href="index.html" class="logo">
-        <img src="assets/logo-black.png" alt="lotus logo" height="50">
+        <img src="/assets/logo-black.png" alt="lotus logo" height="50">
     </a>
 
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
 
-    <label for="menu-toggle" class="hamburger">
+<label for="menu-toggle" class="hamburger" aria-label="Open navigation menu">
         <span></span>
         <span></span>
         <span></span>
     </label>
 
     <ul class="menu">
-        <li><a href="">projects</a></li>
+        <li><a href="#">projects</a></li>
         ⟡
-        <li><a href="">gallery</a></li>
+        <li><a href="#">gallery</a></li>
         ⟡
-        <li><a href="">about</a></li>
+        <li><a href="#">about</a></li>
     </ul>
     </nav>
 </header>
@@ -50,36 +52,36 @@
 
 
 
-    <main>
+    <main id="main">
         <div class="intro-section">
             <div class="intro-text">
                 <h1>
                     Hi! I’m Sreeja Satish, <br> an inquisitive designer connecting <br> people to solutions that inspire.
                 </h1>
-                <h2>
-                    currently studying <br> <i>user experience & interaction design</i> <br> at drexel university
+                <h3>
+                    currently studying user experience & interaction design <br> at drexel university
                 </h3>
-                <h4>come explore some of my work! ↓↓↓</h4>
+                <h3>come explore some of my work! ↓↓↓</h3>
 
             </div>
             <div class="intro-image">
-                <img src="assets/sree-polaroid.png" alt="that's me!">
+                <img src="/assets/sree-polaroid.png" alt="polaroid picture of me">
             </div>
         </div>
 
         <section class="case-study-section">
-            <a class="case-study-card" id="petes-little-lunch-box">
+            <a href="#" class="case-study-card" id="petes-little-lunch-box">
                 <div class="cs-card-info">
                     <div class="cs-text">
-                        <h1>Pete's Little Lunch Box</h1>
+                        <h2>Pete's Little Lunch Box</h2>
                         <h3>Streamlining the  ordering experience of Drexel’s Food Trucks through a comprehensive app.</h3>
                     </div>
                     <div class="cs-petes-logo">
-                        <img src="assets/case-studies/petes/logo-trio.png" alt="logo trio">
+                        <img src="/assets/case-studies/petes/logo-trio.png" alt="pete's little lunch box logo repeated 3 times">
                     </div>
                 </div>
                 <div class="cs-featured-image">
-                    <img src="assets/case-studies/petes/phones.png" alt="phone screens">
+                    <img src="/assets/case-studies/petes/phones.png" alt="3 mobile app interface screens for pete's little lunch box">
                 </div>
                 <div class="cs-pill-tags">
                     <span>UX/UI Design</span>
@@ -90,19 +92,19 @@
         </section>
 
         <section class="case-study-section">
-            <a class="case-study-card" id="cvs-microinteractions">
+            <a href="#" class="case-study-card" id="cvs-microinteractions">
                 <div class="cs-card-info">
                 <div class="cs-text">
-                    <h1>Product Card Microinteractions</h1>
+                    <h2>Product Card Microinteractions</h2>
                     <h3>Elevating CVS’s product card flow to help you find exactly what you need.</h3>
                 </div>
                 <div class="cs-logo">
-                    <img src="assets/case-studies/cvs-microinteractions/cvs-heart-logo.png" alt="CVS logo">
+                    <img src="/assets/case-studies/cvs-microinteractions/cvs-heart-logo.png" alt="CVS heart logo">
                 </div>
                 </div>
 
                 <div class="cs-featured-image">
-                <img src="assets/case-studies/cvs-microinteractions/cvs-computer.png" alt="computer screen">
+                <img src="/assets/case-studies/cvs-microinteractions/cvs-computer.png" alt="computer screen displaying product card microinteractions">
                 </div>
 
                 <div class="cs-pill-tags">
@@ -115,18 +117,18 @@
 
 
         <section class="case-study-section">
-            <a class="case-study-card" id="sunset-cove">
+            <a href="#" class="case-study-card" id="sunset-cove">
                 <div class="cs-card-info">
                     <div class="cs-text">
-                        <h1>Sunset Cove Smoothie Bowls</h1>
+                        <h2>Sunset Cove Smoothie Bowls</h2>
                         <h3>Redesigning the Playa Bowls app interface with meaningful microinteractions in mind.</h3>
                     </div>
                     <div class="cs-logo">
-                        <img src="assets/case-studies/sunset-cove/sunset-cove-logo.png" alt="logo">
+                        <img src="/assets/case-studies/sunset-cove/sunset-cove-logo.png" alt="sunset cove logo of bowl with palm tree and sunset">
                     </div>
                 </div>
                 <div class="cs-featured-image">
-                    <img src="assets/case-studies/sunset-cove/sunset-cove-screens.png" alt="phone screens">
+                    <img src="/assets/case-studies/sunset-cove/sunset-cove-screens.png" alt="3 mobile app interface screens for sunset cove smoothie bowls">
                 </div>
                 <div class="cs-pill-tags">
                     <span>UX/UI Design</span>
@@ -141,19 +143,19 @@
     <footer>
         <div class="connection">
             <div class="footer-message">
-                <h1>It’s nice to see you here! </h1>
-                <h1>Let’s connect and create together &lt;3 </h1>
+                <h2>It’s nice to see you here! </h2>
+                <h2>Let’s connect and create together &lt;3 </h2>
             </div>
             
             <div class="footer-links">
                 <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
-                    <h4>LinkedIn</h4>
+                    LinkedIn
                 </a>
                 <a href="mailto:sreeja.satish@drexel.edu" class="links" target="_blank">
-                    <h4>Email</h4>
+                    Email
                 </a>
                 <a href="https://github.com/sreejas36" class="links" target="_blank">
-                    <h4>Github</h4>
+                    Github
                 </a>
             </div>
         </div>

@@ -19,7 +19,7 @@
     --light-background: #FFF9F3;
     --light-text: #FFF9F3;
     --dark-background: #943E65;
-
+    --black: #000000;
 
     /* status */
     --success-light:#A8E79B;
@@ -33,6 +33,11 @@
     --cutive: "Cutive", serif;
     --cantarell: "Cantarell", sans-serif;
     --cormorant-upright: "Cormorant Upright", serif;
+
+/* 0.5rem = 8px
+1rem = 16px
+1.5rem = 24px
+2rem = 32px  */
 }
 
 
@@ -70,6 +75,8 @@
 body {
     background-color: var(--light-background);
     margin: 0;
+    font-size: clamp(1rem, 2.5vw, 1.125rem);
+    line-height: 1.6;
 }
 
 main {
@@ -78,49 +85,35 @@ main {
 
 
 /* Font Sizes */
+
 h1 {
     font-family: var(--cutive);
-    font-size: 32px;
-    font-weight: 500;
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+
 }
 
 h2 {
-    font-family: var(--cormorant-upright);
-    font-size: 40px;
-    font-weight: 600;
+    font-family: var(--cutive);
+    font-size: clamp(1.5rem, 3.5vw, 2rem);
 }
 
 h3 {
     font-family: var(--cormorant-upright);
-    font-size: 28px;
-    font-weight: 600;
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
 
-h4 {
-    font-family: var(--cormorant-upright);
-    font-size: 24px;
-    font-weight: 500;
-}
-
-h5 {
-    font-family: var(--cutive);
-    font-size: 24px;
-    font-weight: 500;
-}
-
-
-p {
+p, li {
     font-family: var(--cantarell);
-    font-size: 18px;
-    font-weight: 500;
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    font-weight: 400;
+    line-height: 1.6;
 }
 
-
-li {
-    font-family: var(--cantarell);
-    font-weight: 500;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
-
 
 /* SECTIONS */
 
@@ -155,8 +148,15 @@ li {
 
 
 .cs-logo {
-position: sticky;
+    position: sticky;
+    top: 1rem;
 }
+/* 
+.cs-logo img,
+.cs-petes-logo img {
+    width: clamp(20rem, 15vw, 20rem);
+} */
+
 
 /* Nav Bar Layout */
 nav {
@@ -166,6 +166,11 @@ nav {
     padding: 2rem 4rem;
 }
 
+.logo{
+    max-width: 5rem;
+    height: auto;
+    display: block;
+}
 
 /* ---------- Responsive Navbar (No JS) ---------- */
 
@@ -203,6 +208,8 @@ nav {
 }
 
 
+
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
 .hamburger {
@@ -215,7 +222,7 @@ nav {
     top: 100px;
     right: 0;
     width: 100%;
-    background-color: var(--cream);
+    background-color: var(--secondary-accent);
     flex-direction: column;
     align-items: center;
     gap: 1.5rem;
@@ -258,32 +265,18 @@ nav {
 }
 }
 
-/* .menu {
-    list-style: none;
-    display: flex;
-    align-items: flex-end;
-    gap: 1.5rem;
-    font-size: 24px;
-    padding: 0;
-    margin: 0;
-
-    li {
-        font-size: 24px;
-
-    }
-}
-*/
 
 .menu a {
     text-decoration: none;
     color: var(--black);
     font-family: var(--cormorant-upright);
-    font-weight: 00;
+    font-weight: 400;
 }
 
-.menu a:hover {
-    color: var(--fuchsia);
-    transform: scale(1.5);
+.menu a:hover,
+.menu a:focus-visible {
+    color: var(--primary-accent);
+    transform: scale(1.1);
 }
 
 
@@ -367,22 +360,7 @@ nav {
 
 .cs-text {
     display: block;
-}
-
-.cs-text h1 {
-    font-family: "Cutive", serif;
-    text-align: left;
-    margin-bottom: 0.25rem;
-    color: #1a1a1a;
-}
-
-.cs-text h3 {
-    font-family: "Cormorant Upright", serif;
-    font-size: 22px;
-    font-weight: 400;
     color: var(--dark-text);
-    max-width: 500px;
-    margin: 0;
     text-align: left;
 }
 
@@ -392,11 +370,7 @@ nav {
     right: 0;
 }
 
-/* .cs-logo {
-
-} */
-
-.cs-featured-image {
+/* .cs-featured-image {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -405,7 +379,21 @@ nav {
 .cs-featured-image img {
     max-width: 700px;
     transition: transform 0.4s ease;
+} */
+
+.cs-featured-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
 }
+
+.cs-featured-image img {
+    width: 100%;
+    max-width: 700px;
+    transition: transform 0.4s ease;
+
+}
+
 
 /* Slight zoom of image on hover */
 .case-study-card:hover .cs-featured-image img {
@@ -414,36 +402,42 @@ nav {
 
 
 /* Pill tags */
+
 .cs-pill-tags {
     display: flex;
-    flex-direction: column; /* stack vertically */
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3px;
+    flex-direction: column;
     margin-top: auto;
     position: absolute;
     top: 80%;
     right: 5%;
+    flex-wrap: wrap;
+    gap: 0.25rem;
 }
+
 
 .cs-pill-tags span {
-    display: inline-block; /* ensures width wraps content */
-    font-family: "Cormorant Upright", sans-serif;
+    font-size: clamp(0.75rem, 2vw, 0.95rem);
+    padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.6rem, 2vw, 1rem);
+    white-space: nowrap;
+    background: var(--light-background);
     border: 1px solid var(--dark-text);
     border-radius: 999px;
-    padding: 0.25rem 0.5rem; /* smaller padding for tighter fit */
-    background: var(--light-background);
-    /* font-size: 0.9rem; */
-    color: #1a1a1a;
+    padding: 0.25rem 0.5rem; 
+    font-family: "Cormorant Upright", sans-serif;
+    color: var(--black);
     transition: all 0.3s ease;
-    white-space: nowrap; /* prevents text from breaking lines */
+
 }
 
-.cs-pill-tags span:hover {
-    background: #943E65;
+
+.cs-pill-tags span:hover,
+.cs-pill-tags span:focus-visible {
+    background: var(--primary-accent);
     color: var(--light-background);
-    border-color: var(--primary-accent);
+    border: 1px solid var(--primary-accent);
+
 }
+
 
 /* FOOTER */
 footer {
@@ -453,13 +447,13 @@ footer {
     margin-top: 2rem;
 }
 
-.footer-message {
+/* .footer-message {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-}
+} */
 
-.footer-message h1{
+.footer-message h2{
     margin: 0;
 }
 
@@ -473,7 +467,10 @@ footer {
     justify-content: space-between;
     flex-direction: column;
     align-items: flex-end;
+    font-family: var(--cormorant-upright);
+    font-size: clamp(1.25rem, 2.5vw, 1.5rem);
 }
+
 .footer-links a:hover {
     transform: scale(1);
 }
@@ -487,7 +484,7 @@ footer {
     display: flex;
     align-items: center;
     text-decoration: none;
-    color: var(--cream);
+    color: var(--secondary-accent);
 }
 
 .links a:hover {
@@ -509,37 +506,6 @@ footer {
 }
 
 
-/* Pill tags */
-.cs-pill-tags {
-    display: flex;
-    flex-direction: column; /* stack vertically */
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 3px;
-    margin-top: auto;
-    position: absolute;
-    top: 80%;
-    right: 5%;
-}
-
-.cs-pill-tags span {
-    display: inline-block; /* ensures width wraps content */
-    font-family: "Cormorant Upright", sans-serif;
-    border: 1px solid #333;
-    border-radius: 999px;
-    padding: 0.25rem 0.5rem; /* smaller padding for tighter fit */
-    background: var(--light-background);
-    /* font-size: 0.9rem; */
-    color: #1a1a1a;
-    transition: all 0.3s ease;
-    white-space: nowrap; /* prevents text from breaking lines */
-}
-
-.cs-pill-tags span:hover {
-    background: #943E65;
-    color: var(--light-text);
-    border-color: var(--dark-background);
-}
 
 
 
@@ -614,15 +580,17 @@ footer {
     .case-study-section {
         height: 100%;
     }
+    .cs-featured-image img {
+        max-width: 100%;
+    }
+    .cs-pill-tags {
+        position: static;
+        justify-content: center;
+        max-width: 100%;
+        margin-top: 1rem;
+    }
 }
 
-.cs-featured-image img,
-.cs-logo img,
-.cs-petes-logo img {
-    width: 100%;
-  height: auto;     /* maintain aspect ratio */
-    display: block;
-}
 
 @media (max-width: 768px) {
     .case-study-card {
@@ -638,33 +606,8 @@ footer {
 
 
 
-@media (max-width: 600px) {
-    .case-study-card {
-        padding: 1.5rem;
-        border-radius: 20px;
-    }
-
-    .cs-text h1 {
-        font-size: 1.3rem;
-    }
-
-    .cs-text h3 {
-        font-size: 0.95rem;
-    }
-
-    .cs-pill-tags span {
-        font-size: 0.85rem;
-        padding: 0.4rem 1rem;
-    }
-    .connection {
-        display: flex;
-        flex-direction: column;
-    }
-    .footer-links {
-        flex-direction: row;
-    }
-
-    .case-study-section {
-        height: 100%;
+@media (prefers-reduced-motion: reduce) {
+    * {
+        transition: none !important;
     }
 }
