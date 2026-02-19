@@ -47,11 +47,61 @@
 
         <h1> Contact Me! </h1>
 
+        <form>
+<fieldset>
+
+    <label for="firstname">What's your first name?</label>
+    <input
+        type="text"
+        id="firstname"
+        name="firstname"
+        autocomplete="given-name"
+        required
+        aria-describedby="firstname-error"
+    />
+    <span id="firstname-error" class="error-message" role="alert" aria-live="polite"></span>
+
+    <label for="lastname">What's your last name?</label>
+    <input
+        type="text"
+        id="lastname"
+        name="lastname"
+        autocomplete="family-name"
+        required
+        aria-describedby="lastname-error"
+    />
+    <span id="lastname-error" class="error-message" role="alert" aria-live="polite"></span>
+
+    <label for="email">What's your email?</label>
+    <input
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="email"
+        required
+        aria-describedby="email-error"
+    />
+    <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
+
+    <label for="message">What do you want to say?</label>
+    <textarea
+        id="message"
+        name="message"
+        rows="5"
+        required
+        aria-describedby="message-error"
+    ></textarea>
+    <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
+
+    <button type="submit">Send Message</button>
+</fieldset>
+</form>
+<!-- 
         <form action="">
             <label for="first name">What's your first name?</label>
             <input type="text" id="firstname" name="firstname">
             <input type="text" id="firstname" name="firstname" autocomplete="given-name" required="" aria-required="true" aria-describedby="firstname-error" class="valid">
-            <span id="firstname-error" class="error-message" role="alert" aria-live="polite">Hey, who are you?</span>
+            <span id="firstname-error" class="error-message" role="alert" aria-live="polite"></span>
             
             
             <label for="last name">What's your last name?</label>
@@ -66,7 +116,7 @@
             <input type="text" id="message" name="message">
             <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
         </form>
-
+ -->
 
 
 

@@ -620,3 +620,14 @@ footer {
         transition: none !important;
     }
 }
+
+
+form{
+    display: flex;
+}
+
+label (
+    font-family: var(--cutive);
+    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
+
+)
