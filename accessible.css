@@ -100,6 +100,8 @@ h2 {
 h3 {
     font-family: var(--cormorant-upright);
     font-size: clamp(1.25rem, 2.5vw, 1.5rem);
+    font-weight: 400;
+
 }
 
 p, li {
@@ -170,6 +172,7 @@ nav {
     max-width: 5rem;
     height: auto;
     display: block;
+    position: sticky;
 }
 
 /* ---------- Responsive Navbar (No JS) ---------- */
@@ -306,6 +309,7 @@ nav {
     justify-content: space-between;
     text-align: center;
     text-decoration: none;
+    height: auto;
 }
 
 
@@ -362,6 +366,11 @@ nav {
     display: block;
     color: var(--dark-text);
     text-align: left;
+    margin: 2%;
+}
+
+.cs-text h2,h3{
+    margin: 0;
 }
 
 .cs-petes-logo {

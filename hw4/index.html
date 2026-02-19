@@ -5,21 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreeja Satish's Portfolio</title>
     <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
-    <link rel="stylesheet" href="accessible.css">
+    <link rel="stylesheet" href="/accessible.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
 </head>
 
-<body>
+<body id="top">
     <a href="#main" class="skip-link">
         Skip to main content 
         </a>
 
-<header>
+<header aria-label="primary navigation and logo in header">
     <nav>
-    <a href="index.html" class="logo">
-        <img src="assets/logo-black.png" alt="lotus logo" height="50">
+    <a href="index.html" class="logo" aria-label="logo of intertwined lotus">
+        <img src="/assets/logo-black.png" alt="lotus logo" height="50">
     </a>
 
     <input type="checkbox" id="menu-toggle" class="menu-toggle" />
@@ -44,3 +44,46 @@
 
 
     <main id="main">
+
+        <h1> Contact Sreeja! </h1>
+
+        <form action="">
+            <label for="first name">What's your first name?</label>
+            <input type="text" id="firstname" name="firstname">
+        </form>
+
+
+
+
+    </main>
+
+
+    <footer>
+        <div class="connection">
+            <div class="footer-message">
+                <h2>It’s nice to see you here! </h2>
+                <h2>Let’s connect and create together &lt;3 </h2>
+            </div>
+            
+            <div class="footer-links">
+                <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
+                    LinkedIn
+                </a>
+                <a href="mailto:sreeja.satish@drexel.edu" class="links" target="_blank">
+                    Email
+                </a>
+                <a href="https://github.com/sreejas36" class="links" target="_blank">
+                    Github
+                </a>
+            </div>
+        </div>
+
+
+
+        <div class="copyright">
+            Ⓒ 2025 Sreeja Satish
+        </div>
+    </footer>
+
+</body>
+</html>
