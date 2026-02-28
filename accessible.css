@@ -115,7 +115,29 @@ img {
     max-width: 100%;
     height: auto;
     display: block;
+    overflow-clip-margin: content-box;
+    overflow: clip;
 }
+
+.skip-link {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    background: var(--neutral-black);
+    color: var(--neutral-white);
+    padding: 0.5rem;
+    z-index: 100;
+    font-family: var(--cantarell);
+    }
+
+.skip-link:focus { 
+    top: 0;
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 5px;  
+
+}
+
+
 
 /* SECTIONS */
 
@@ -124,7 +146,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 3rem 4rem 4rem 4rem;
+    padding: 1rem 3rem 3rem 3rem;
     gap: 2rem;
     max-width: 1200px;
     align-self: center;
@@ -165,7 +187,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2rem 4rem;
+    padding: 3rem 4rem;
 }
 
 .logo{
@@ -237,13 +259,14 @@ nav {
 
   /* Show menu when checkbox is checked */
 .menu-toggle:checked + .hamburger + .menu {
-    max-height: 500px;
-    padding: 5rem 0;
+    max-height: 100vh;
+    padding: 12rem 0;
+    margin-top: 1rem;
 }
 
   /* Animate hamburger into “X” */
 .menu-toggle:checked + .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translateY(16px);
+    transform: rotate(45deg) translateY(8px) translateX(8px);
 }
 
 .menu-toggle:checked + .hamburger span:nth-child(2) {
@@ -251,7 +274,8 @@ nav {
 }
 
 .menu-toggle:checked + .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-16px);
+    transform: rotate(-45deg) translateY(-8px) translateX(8px);
+
 }
 
   /* Optional: hide decorative image on desktop */
@@ -297,7 +321,7 @@ nav {
     position: relative;
     width: 100%;
     max-width: 1000px;
-    aspect-ratio: 1200 / 700;
+    /* aspect-ratio: 1200 / 700; */
     border: 1px solid #000000;
     border-radius: 30px;
     box-shadow: 0 6px 16px rgba(0,0,0,0.1);
@@ -373,10 +397,17 @@ nav {
     margin: 0;
 }
 
-.cs-petes-logo {
+/* .cs-petes-logo {
     position: absolute;
     top: 0;
     right: 0;
+    width: 50%;
+} */
+.cs-petes-logo img{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45%;
 }
 
 /* .cs-featured-image {
@@ -538,8 +569,7 @@ footer {
 
 @media (max-width: 900px) {
     .cs-card-info {
-        flex-direction: column;
-        text-align: center;
+        justify-content: center;
     }
 
     .cs-text h1 {
@@ -551,8 +581,9 @@ footer {
         max-width: 100%;
     }
 
+
     .cs-logo img {
-        width: 100px;
+        width: 5rem;
     }
 
     .cs-featured-image img {
@@ -561,17 +592,21 @@ footer {
 }
 
 @media (max-width: 600px) {
-    .case-study-card {
-        padding: 1.5rem;
-        border-radius: 20px;
+    h1 {
+        font-size: 1.5rem;
     }
 
-    .cs-text h1 {
+    .case-study-card {
+        padding: 1.5rem;
+        height: auto;
+    }
+
+    .cs-text h2 {
         font-size: 1.3rem;
     }
 
     .cs-text h3 {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 
     .cs-pill-tags span {
@@ -597,6 +632,9 @@ footer {
         justify-content: center;
         max-width: 100%;
         margin-top: 1rem;
+    }
+    .menu a {
+        font-size: 1.2rem;
     }
 }
 
@@ -631,3 +669,5 @@ label (
     font-size: clamp(1.75rem, 3.5vw, 2.25rem);
 
 )
+
+

@@ -40,13 +40,15 @@
     </nav>
 </header>
 
-
-
+Jervo Feedback: Make edits 
+<!-- Stylize everthing! -->
+<!-- Feedback for submit form -->
+<!-- Remove skip -->
 
     <main id="main">
 
         <h1> Contact Me! </h1>
-
+        <h2>Don't be shy, let's chat!</h2>
         <form>
 <fieldset>
 
@@ -96,7 +98,7 @@
     <button type="submit">Send Message</button>
 </fieldset>
 </form>
-<!-- 
+
         <form action="">
             <label for="first name">What's your first name?</label>
             <input type="text" id="firstname" name="firstname">
@@ -109,15 +111,49 @@
             <span id="lastname-error" class="error-message" role="alert" aria-live="polite"></span>
 
             <label for="email">What's your email?</label>
-            <input type="text" id="email" name="email">
+            <input type="email" id="email" name="email">
             <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
 
             <label for="message">What do you want to say?</label>
             <input type="text" id="message" name="message">
             <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
         </form>
- -->
 
+        <form action="">
+            <label for="first name">What's your first name?</label>
+            <input type="text" id="firstname" name="firstname">
+
+            <label for="firstname">
+                First name
+                <span aria-label="required">*</span>
+            </label>
+            <input 
+                type="text"
+                id="firstname"
+                required
+                aria-required="true">
+
+
+
+
+                
+                <div class="form-field">
+                    <label for="password">
+                        password
+                        <span aria>*</span>
+                    </label>
+                    <input 
+                        type="password"
+                        id="password"
+                        required
+                        aria-required="true"
+                        aria-invalid="true"
+                        aria-describedby="password-error">
+                    <div id="password-error" role="alert">
+                        Password must be at least 8 characters
+                    </div>
+                </div>
+        </form>
 
 
     </main>
