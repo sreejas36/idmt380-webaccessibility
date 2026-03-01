@@ -79,6 +79,16 @@ body {
     line-height: 1.6;
 }
 
+/* @media (prefers-color-scheme: dark) {
+  /* Styles for dark mode users */
+    /* main {
+        background-color: var(--dark-background);
+        color: #ffffff;
+    }
+    .hamburger span{
+    background-color: var(--light-background);
+    } */
+}
 main {
     color: var(--dark-text);
 }
@@ -123,8 +133,8 @@ img {
     position: absolute;
     top: -2.5rem;
     left: 0;
-    background: var(--neutral-black);
-    color: var(--neutral-white);
+    background: var(--light-background);
+    color: var(--dark-text);
     padding: 0.5rem;
     z-index: 100;
     font-family: var(--cantarell);
