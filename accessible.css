@@ -87,8 +87,9 @@ body {
     }
     .hamburger span{
     background-color: var(--light-background);
-    } */
-}
+    } 
+}*/
+
 main {
     color: var(--dark-text);
 }
@@ -146,7 +147,23 @@ img {
     outline-offset: 5px;  
 
 }
+.skip-link-2 {
+    position: absolute;
+    top: -2.5rem;
+    left: 0;
+    background: var(--light-background);
+    color: var(--dark-text);
+    padding: 0.5rem;
+    z-index: 100;
+    font-family: var(--cantarell);
+    }
 
+.skip-link-2:focus { 
+    top: 0;
+    outline: 3px solid var(--primary-dark);
+    outline-offset: 5px;  
+
+}
 
 
 /* SECTIONS */
@@ -181,10 +198,11 @@ img {
 }
 
 
-.cs-logo {
-    position: sticky;
-    top: 1rem;
+.cs-logo,
+.cs-petes-logo {
+    position: relative;
 }
+
 /* 
 .cs-logo img,
 .cs-petes-logo img {
@@ -403,7 +421,8 @@ nav {
     margin: 2%;
 }
 
-.cs-text h2,h3{
+.cs-text h2,
+.cs-text h3 {
     margin: 0;
 }
 
@@ -465,7 +484,7 @@ nav {
 }
 
 
-.cs-pill-tags span {
+.cs-pill-tags li {
     font-size: clamp(0.75rem, 2vw, 0.95rem);
     padding: clamp(0.25rem, 1vw, 0.5rem) clamp(0.6rem, 2vw, 1rem);
     white-space: nowrap;
@@ -476,12 +495,12 @@ nav {
     font-family: "Cormorant Upright", sans-serif;
     color: var(--black);
     transition: all 0.3s ease;
-
+    list-style-type: none;
 }
 
 
-.cs-pill-tags span:hover,
-.cs-pill-tags span:focus-visible {
+.cs-pill-tags li:hover,
+.cs-pill-tags li:focus-visible {
     background: var(--primary-accent);
     color: var(--light-background);
     border: 1px solid var(--primary-accent);
@@ -674,10 +693,8 @@ form{
     display: flex;
 }
 
-label (
+label {
     font-family: var(--cutive);
     font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-
-)
-
+}
 
