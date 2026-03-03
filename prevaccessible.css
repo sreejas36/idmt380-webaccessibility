@@ -426,18 +426,14 @@ nav {
     margin: 0;
 }
 
-/* .cs-petes-logo {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 50%;
-} */
+
 .cs-petes-logo img{
-    position: absolute;
-    top: 0;
-    right: 0;
+    position: relative;
+    bottom: 100%;
+    left: 100%;
     width: 45%;
 }
+
 
 /* .cs-featured-image {
     display: flex;

@@ -1,165 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sreeja Satish's Portfolio</title>
-    <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/accessible.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sreeja Satish's Portfolio</title>
+        <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
+        <link rel="stylesheet" href="aria.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
 </head>
 
 <!-- updated January 2026 -->
 <!-- IDM T380 Web Accessibility -->
 
 <body>
-    <a href="#main" class="skip-link">
-        Skip to main content 
+        <a href="#main" class="skip-link">
+                Skip to main content 
         </a>
 
 <header aria-label="Primary Navigation with Logo">
-    <nav aria-label="Primary Navigation">
-        <a href="index.html" class="logo" aria-label="Lotus Logo">
-                <img src="/assets/logo-black.png" alt="lotus logo" height="50">
-        </a>
+        <nav aria-label="Primary Navigation">
+                <a href="index.html" class="logo" aria-label="Lotus Logo">
+                        <img src="/assets/logo-black.png" alt="lotus logo" height="50">
+                </a>
 
-        <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                <label
+                        for="menu-toggle"
+                        class="hamburger"
+                        aria-label="Open navigation menu"
+                        aria-controls="primary-menu">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                </label>
 
-        <label for="menu-toggle" class="hamburger" aria-label="Open navigation menu aria-controls="primary-menu">                
-                <span></span>
-                <span></span>
-                <span></span>
-        </label>
-
-        <ul class="menu" aria-label="Primary Navigation Pages">
-                <li aria-label="Projects"><a href="#">projects</a></li>
-                <span aria-hidden="true">⟡</span>
-                <li aria-label="Gallery"><a href="#">gallery</a></li>
-                <span aria-hidden="true">⟡</span>
-                <li aria-label="About"><a href="#">about</a></li>
-        </ul>
-    </nav>
+                <ul class="menu" aria-label="Primary Navigation Pages">
+                        <li aria-label="Projects"><a href="#">projects</a></li>
+                        <span aria-hidden="true">⟡</span>
+                        <li aria-label="Gallery"><a href="#">gallery</a></li>
+                        <span aria-hidden="true">⟡</span>
+                        <li aria-label="About"><a href="#">about</a></li>
+                </ul>
+        </nav>
 </header>
 
 
 
 
-    <main id="main">
-        <section class="intro-section" aria-label="Introduction">
-            <article class="intro-text">
-                <h1>
-                    Hi! I’m Sreeja Satish, <br> an inquisitive designer connecting <br> people to solutions that inspire.
-                </h1>
-                <h3 aria-label="Intro Information">
-                    currently studying user experience & interaction design <br> at drexel university
-                </h3>
-                <h3 aria-label="Intro Call to Action">come explore some of my work! ↓↓↓</h3>
-            </article>
-            <figure class="intro-image" aria-label="Polaroid Picture of Sreeja">
-                <img src="/assets/sree-polaroid.png" alt="polaroid picture of me">
-            </figure>
-        </section>
-
-        <article class="case-study-section" aria-label="Pete's Little Lunch Box Case Study">
-            <a href="#" class="case-study-card" id="petes-little-lunch-box">
-                <section class="cs-card-info" aria-label="Introduction">
-                    <section class="cs-text" aria-label="Pete's Description">
-                        <h2>Pete's Little Lunch Box</h2>
-                        <h3>Streamlining the  ordering experience of Drexel’s Food Trucks <br> through a comprehensive app.</h3>
-                    </section>
-                    <figure class="cs-petes-logo" aria-label="Pete's Logo Repeated 3 Times">
-                        <img src="/assets/case-studies/petes/logo-trio.png" alt="pete's little lunch box logo repeated 3 times">
-                    </figure>
-                </section>
-                <figure class="cs-featured-image" aria-label="Featured Image of 3 Mobile App Interface Screens For Petes">
-                    <img src="/assets/case-studies/petes/phones.png" alt="3 mobile app interface screens for pete's little lunch box">
+        <main id="main">
+                <section class="intro-section" aria-label="Introduction">
+                <article class="intro-text">
+                        <h1>
+                        Hi! I’m Sreeja Satish, <br> an inquisitive designer connecting <br> people to solutions that inspire.
+                        </h1>
+                        <h3 aria-label="Intro Information">
+                        currently studying user experience & interaction design <br> at drexel university
+                        </h3>
+                        <h3 aria-label="Intro Call to Action">come explore some of my work! ↓↓↓</h3>
+                </article>
+                <figure class="intro-image" aria-label="Polaroid Picture of Sreeja">
+                        <img src="/assets/sree-polaroid.png" alt="polaroid picture of me">
                 </figure>
-                <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
-                    <li>UX/UI Design</li>
-                    <li>Web Development</li>
-                    <li>UX Research</li>
                 </section>
-            </a>
-        </section>
 
-        <article class="case-study-section" aria-label="CVS Microinteractions Case Study">
-            <a href="#" class="case-study-card" id="cvs-microinteractions">
-                <section class="cs-card-info" aria-label="Introduction">
-                        <section class="cs-text" aria-label="CVS Microinteractions Description">
-                                <h2>Product Card Microinteractions</h2>
-                                <h3>Elevating CVS’s product card flow to help you <br> find exactly what you need.</h3>
+                <article class="case-study-section" aria-label="Pete's Little Lunch Box Case Study">
+                <a href="#" class="case-study-card" id="petes-little-lunch-box">
+                        <section class="cs-card-info" aria-label="Introduction">
+                        <section class="cs-text" aria-label="Pete's Description">
+                                <h2>Pete's Little Lunch Box</h2>
+                                <h3>Streamlining the  ordering experience of Drexel’s Food Trucks <br> through a comprehensive app.</h3>
                         </section>
-                        <figure class="cs-logo" aria-label="CVS Heart Logo">
-                                <img src="/assets/case-studies/cvs-microinteractions/cvs-heart-logo.png" alt="CVS heart logo">
+                        <figure class="cs-petes-logo" aria-label="Pete's Logo Repeated 3 Times">
+                                <img src="/assets/case-studies/petes/logo-trio.png" alt="pete's little lunch box logo repeated 3 times">
                         </figure>
-                </section>
+                        </section>
+                        <figure class="cs-featured-image" aria-label="Featured Image of 3 Mobile App Interface Screens For Petes">
+                        <img src="/assets/case-studies/petes/phones.png" alt="3 mobile app interface screens for pete's little lunch box">
+                        </figure>
+                        <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
+                                <ul>
+                                        <li>UX/UI Design</li>
+                                        <li>Web Development</li>
+                                        <li>UX Research</li>
+                                </ul>
 
-                <figure class="cs-featured-image" aria-label="Featured Image of Computer Displaying Dynamic Product Cards">
-                        <img src="/assets/case-studies/cvs-microinteractions/cvs-computer.png" alt="computer screen displaying product card microinteractions">
-                </figure>
-
-                <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
-                        <li>UX/UI Design</li>
-                        <li>Web Development</li>
-                        <li>Microinteractions</li>
-                </section>
-            </a>
-        </article>
-
-
-        <article class="case-study-section" aria-label="Playa Bowls Redesign Case Study">
-            <a href="#" class="case-study-card" id="sunset-cove">
-                <section class="cs-card-info" aria-label="Introduction">
-                    <section class="cs-text" aria-label="Sunset Cove Description">
-                        <h2>Sunset Cove Smoothie Bowls</h2>
-                        <h3>Redesigning the Playa Bowls app interface with <br> meaningful microinteractions in mind.</h3>
-                    </section>
-                    <figure class="cs-logo">
-                        <img src="/assets/case-studies/sunset-cove/sunset-cove-logo.png" alt="sunset cove logo of bowl with palm tree and sunset">
-                    </figure>
-                </section>
-                <figure class="cs-featured-image" aria-label="Featured Image of 3 Mobile App Interface Screens For Sunset Cove Smoothie Bowls">
-                    <img src="/assets/case-studies/sunset-cove/sunset-cove-screens.png" alt="3 mobile app interface screens for sunset cove smoothie bowls">
-                </figure>
-                <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">                    
-                        <li>UX/UI Design</li>
-                        <li>Animation</li>
-                </section>
-            </a>
-        </article>
-
-    </main>
-
-
-    <footer aria-label="Portfolio Footer">
-        <section class="connection">
-            <section class="footer-message" aria-label="Closing Message">
-                <h2>It’s nice to see you here! </h2>
-                <h2>Let’s connect and create together &lt;3 </h2>
-            </section>
-            
-            <section class="footer-links" aria-label="Social Media Links">
-                <a href="#top" class="skip-link-2">Skip Back to Top</a>
-                <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
-                    LinkedIn
+                        </section>
                 </a>
-                <a href="mailto:sreeja.satish@drexel.edu" class="links" target="_blank">
-                    Email
-                </a>
-                <a href="https://github.com/sreejas36" class="links" target="_blank">
-                    Github
-                </a>
-            </section>
-        </section>
+                </article>
+
+                <article class="case-study-section" aria-label="CVS Microinteractions Case Study">
+                        <a href="#" class="case-study-card" id="cvs-microinteractions">
+                                <section class="cs-card-info" aria-label="Introduction">
+                                        <section class="cs-text" aria-label="CVS Microinteractions Description">
+                                                <h2>Product Card Microinteractions</h2>
+                                                <h3>Elevating CVS’s product card flow to help you <br> find exactly what you need.</h3>
+                                        </section>
+                                        <figure class="cs-logo" aria-label="CVS Heart Logo">
+                                                <img src="/assets/case-studies/cvs-microinteractions/cvs-heart-logo.png" alt="CVS heart logo">
+                                        </figure>
+                                </section>
+
+                                <figure class="cs-featured-image" aria-label="Featured Image of Computer Displaying Dynamic Product Cards">
+                                        <img src="/assets/case-studies/cvs-microinteractions/cvs-computer.png" alt="computer screen displaying product card microinteractions">
+                                </figure>
+
+                                <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
+                                        <ul>
+                                                <li>UX/UI Design</li>
+                                                <li>Web Development</li>
+                                                <li>Microinteractions</li>
+                                        </ul>
+                                </section>
+                        </a>
+                </article>
+
+
+                <article class="case-study-section" aria-label="Playa Bowls Redesign Case Study">
+                        <a href="#" class="case-study-card" id="sunset-cove">
+                                <section class="cs-card-info" aria-label="Introduction">
+                                <section class="cs-text" aria-label="Sunset Cove Description">
+                                        <h2>Sunset Cove Smoothie Bowls</h2>
+                                        <h3>Redesigning the Playa Bowls app interface with <br> meaningful microinteractions in mind.</h3>
+                                </section>
+                                <figure class="cs-logo">
+                                        <img src="/assets/case-studies/sunset-cove/sunset-cove-logo.png" alt="sunset cove logo of bowl with palm tree and sunset">
+                                </figure>
+                                </section>
+                                <figure class="cs-featured-image" aria-label="Featured Image of 3 Mobile App Interface Screens For Sunset Cove Smoothie Bowls">
+                                <img src="/assets/case-studies/sunset-cove/sunset-cove-screens.png" alt="3 mobile app interface screens for sunset cove smoothie bowls">
+                                </figure>
+                                <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
+                                        <ul>
+                                                <li>UX/UI Design</li>
+                                                <li>Animation</li>
+                                        </ul>
+                                </section>
+                        </a>
+                </article>
+
+        </main>
+
+
+        <footer aria-label="Portfolio Footer">
+                <section class="connection">
+                <section class="footer-message" aria-label="Closing Message">
+                        <h2>It’s nice to see you here! </h2>
+                        <h2>Let’s connect and create together &lt;3 </h2>
+                </section>
+                
+                <section class="footer-links" aria-label="Social Media Links">
+                        <a href="#top" class="skip-link-2">Skip Back to Top</a>
+                        <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
+                        LinkedIn
+                        </a>
+                        <a href="mailto:sreeja.satish@drexel.edu" class="links" target="_blank">
+                        Email
+                        </a>
+                        <a href="https://github.com/sreejas36" class="links" target="_blank">
+                        Github
+                        </a>
+                </section>
+                </section>
 
 
 
-        <section class="copyright" aria-label="Website Copyright">
-            Ⓒ 2025 Sreeja Satish
-        </section>
-    </footer>
+                <section class="copyright" aria-label="Website Copyright">
+                Ⓒ 2025 Sreeja Satish
+                </section>
+        </footer>
 
 </body>
 </html>
