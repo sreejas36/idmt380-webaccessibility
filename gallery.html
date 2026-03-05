@@ -11,7 +11,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
 </head>
 
-<!-- updated March 2026 -->
+<!-- updated January 2026 -->
 <!-- IDM T380 Web Accessibility -->
 
 <body>
@@ -37,93 +37,54 @@
                 </label>
 
                 <ul class="menu" aria-label="Primary Navigation Pages">
-                        <li aria-label="Projects"><a href="#">projects</a></li>
+                        <li aria-label="Projects"><a href="index.html">projects</a></li>
                         <span aria-hidden="true">⟡</span>
-                        <li aria-label="Gallery"><a href="#">gallery</a></li>
+                        <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
                         <span aria-hidden="true">⟡</span>
-                        <li aria-label="About"><a href="#">about</a></li>
+                        <li aria-label="About"><a href="form.html">about</a></li>
                 </ul>
         </nav>
 </header>
 
 
 
-<!-- 
-Jervo Feedback: Make edits 
-Stylize everthing!
-Feedback for submit form
-Remove skip -->
-
     <main id="main">
-        <h1>Contact Me!</h1>
-        <h2>Don't be shy, let's chat!</h2>
 
-        <form id="contact-form" action="#" method="post" novalidate>
-        <fieldset>
-            <legend class="sr-only">Contact Form</legend>
+    <section class="gallery">
+        <div class="gallery-intro">
+            <img src="assets/photography/ganapathi.webp" alt="Ganapathi" width="200px">
+            <div class="gallery-text">
+                <h1>Sreeja's Gallery</h1>
+                <h4 class="quote">photographer, writer, dreamer;<br> a collection of my journey, seeing the world through my eyes</h4>
+            </div>
+        </div>
 
-            <!-- First Name -->
-            <label for="firstname">
-            First Name (required)
-            <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                autocomplete="given-name"
-                required
-                aria-describedby="firstname-error"
-            />
-            </label>
-            <p id="firstname-error" role="alert" aria-live="polite"></p>
+        <div class="masonry-gallery">
+            <img src="assets/photography/a-gilded-room.webp"  alt="A Gilded Room">
+            <img src="assets/photography/diana-pma.webp" alt="Diana">
+            <img src="assets/photography/city-hall.png" alt="City Hall">
+            <img src="assets/photography/clocks.webp" alt="clocks">
+            <img src="assets/photography/diamonds-and-shadows.webp" alt="Diamonds and Shadows">
+            <img src="assets/photography/divided.png" alt="Divided">
+            <img src="assets/photography/embarcadero.webp" alt="Embarcadero">
+            <img src="assets/photography/framed-tower.webp" alt="Framed Tower">
 
-            <!-- Last Name -->
-            <label for="lastname">
-            Last Name (required)
-            <input
-                type="text"
-                id="lastname"
-                name="lastname"
-                autocomplete="family-name"
-                required
-                aria-describedby="lastname-error"
-            />
-            </label>
-            <p id="lastname-error" role="alert" aria-live="polite"></p>
+            <img src="assets/photography/glowing-flora.webp" class="landscape" alt=" Glowing Flora">
+            <img src="assets/photography/pushpanjali.webp" alt="Pushpanjali">
+            <img src="assets/photography/sunlit-flowers.webp" alt="Sunlit Flowers">
+            
+            <img src="assets/photography/heart_leaf.webp" alt="Heart Leaf">
+            <img src="assets/photography/journey-forward.webp" alt="Journey Forward">
+            <img src="assets/photography/pma-complements.webp" alt="PMA Complements">
+            <img src="assets/photography/spiral_quote.webp" alt="Spiral Quote">
+            <img src="assets/photography/stained-glass.webp" alt="Stained Glass">
+            <img src="assets/photography/sunspotted-san-francisco-2.webp" alt="San Fran City">
+            <img src="assets/photography/tilted.webp" alt="Tilted">
+            <img src="assets/photography/sunspotted-san-francisco.webp" alt="San Fran">
+            <img src="assets/photography/sunset-philly.png" alt="Sunset on the Philly Skyline">
 
-            <!-- Email -->
-            <label for="email">
-            Email (required)
-            <input
-                type="email"
-                id="email"
-                name="email"
-                autocomplete="email"
-                required
-                aria-describedby="email-error"
-            />
-            </label>
-            <p id="email-error" role="alert" aria-live="polite"></p>
-
-            <!-- Message -->
-            <label for="message">
-            Message (required)
-            <textarea
-                id="message"
-                name="message"
-                rows="5"
-                required
-                aria-describedby="message-error"
-            ></textarea>
-            </label>
-            <p id="message-error" role="alert" aria-live="polite"></p>
-
-            <button type="submit">Send Message!</button>
-            <button type="button" id="discard-btn">Discard</button>
-            <p id="form-feedback" role="status" aria-live="polite"></p>
-        </fieldset>
-        </form>
-
-
+        </div>
+    </section>
 
     </main>
 
