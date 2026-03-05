@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sreeja Satish's Portfolio</title>
     <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
-    <link rel="stylesheet" href="/accessible.css">
+    <link rel="stylesheet" href="form.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
@@ -39,121 +39,81 @@
     </ul>
     </nav>
 </header>
-
+<!-- 
 Jervo Feedback: Make edits 
-<!-- Stylize everthing! -->
-<!-- Feedback for submit form -->
-<!-- Remove skip -->
+Stylize everthing!
+Feedback for submit form
+Remove skip -->
 
     <main id="main">
-
-        <h1> Contact Me! </h1>
+        <h1>Contact Me!</h1>
         <h2>Don't be shy, let's chat!</h2>
-        <form>
-<fieldset>
 
-    <label for="firstname">What's your first name?</label>
-    <input
-        type="text"
-        id="firstname"
-        name="firstname"
-        autocomplete="given-name"
-        required
-        aria-describedby="firstname-error"
-    />
-    <span id="firstname-error" class="error-message" role="alert" aria-live="polite"></span>
+        <form id="contact-form" action="#" method="post" novalidate>
+        <fieldset>
+            <legend class="sr-only">Contact Form</legend>
 
-    <label for="lastname">What's your last name?</label>
-    <input
-        type="text"
-        id="lastname"
-        name="lastname"
-        autocomplete="family-name"
-        required
-        aria-describedby="lastname-error"
-    />
-    <span id="lastname-error" class="error-message" role="alert" aria-live="polite"></span>
-
-    <label for="email">What's your email?</label>
-    <input
-        type="email"
-        id="email"
-        name="email"
-        autocomplete="email"
-        required
-        aria-describedby="email-error"
-    />
-    <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
-
-    <label for="message">What do you want to say?</label>
-    <textarea
-        id="message"
-        name="message"
-        rows="5"
-        required
-        aria-describedby="message-error"
-    ></textarea>
-    <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
-
-    <button type="submit">Send Message</button>
-</fieldset>
-</form>
-
-        <form action="">
-            <label for="first name">What's your first name?</label>
-            <input type="text" id="firstname" name="firstname">
-            <input type="text" id="firstname" name="firstname" autocomplete="given-name" required="" aria-required="true" aria-describedby="firstname-error" class="valid">
-            <span id="firstname-error" class="error-message" role="alert" aria-live="polite"></span>
-            
-            
-            <label for="last name">What's your last name?</label>
-            <input type="text" id="lastname" name="lastname">
-            <span id="lastname-error" class="error-message" role="alert" aria-live="polite"></span>
-
-            <label for="email">What's your email?</label>
-            <input type="email" id="email" name="email">
-            <span id="email-error" class="error-message" role="alert" aria-live="polite"></span>
-
-            <label for="message">What do you want to say?</label>
-            <input type="text" id="message" name="message">
-            <span id="message-error" class="error-message" role="alert" aria-live="polite"></span>
-        </form>
-
-        <form action="">
-            <label for="first name">What's your first name?</label>
-            <input type="text" id="firstname" name="firstname">
-
+            <!-- First Name -->
             <label for="firstname">
-                First name
-                <span aria-label="required">*</span>
-            </label>
-            <input 
+            First Name (required)
+            <input
                 type="text"
                 id="firstname"
+                name="firstname"
+                autocomplete="given-name"
                 required
-                aria-required="true">
+                aria-describedby="firstname-error"
+            />
+            </label>
+            <p id="firstname-error" role="alert" aria-live="polite"></p>
 
+            <!-- Last Name -->
+            <label for="lastname">
+            Last Name (required)
+            <input
+                type="text"
+                id="lastname"
+                name="lastname"
+                autocomplete="family-name"
+                required
+                aria-describedby="lastname-error"
+            />
+            </label>
+            <p id="lastname-error" role="alert" aria-live="polite"></p>
 
+            <!-- Email -->
+            <label for="email">
+            Email (required)
+            <input
+                type="email"
+                id="email"
+                name="email"
+                autocomplete="email"
+                required
+                aria-describedby="email-error"
+            />
+            </label>
+            <p id="email-error" role="alert" aria-live="polite"></p>
 
+            <!-- Message -->
+            <label for="message">
+            Message (required)
+            <textarea
+                id="message"
+                name="message"
+                rows="5"
+                required
+                aria-describedby="message-error"
+            ></textarea>
+            </label>
+            <p id="message-error" role="alert" aria-live="polite"></p>
 
-                
-                <div class="form-field">
-                    <label for="password">
-                        password
-                        <span aria>*</span>
-                    </label>
-                    <input 
-                        type="password"
-                        id="password"
-                        required
-                        aria-required="true"
-                        aria-invalid="true"
-                        aria-describedby="password-error">
-                    <div id="password-error" role="alert">
-                        Password must be at least 8 characters
-                    </div>
-                </div>
+            <button type="submit">Send Message!</button>
+            <button type="button" id="discard-btn">Discard</button>
+            <p id="form-feedback" role="status" aria-live="polite"></p>
+        </fieldset>
         </form>
+
 
 
     </main>
@@ -187,4 +147,6 @@ Jervo Feedback: Make edits
     </footer>
 
 </body>
+
+<script src="form.js" defer></script>
 </html>
