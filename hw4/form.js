@@ -60,48 +60,71 @@
     setupFieldValidation(emailInput, emailError, 'Email', validateEmail);
     setupFieldValidation(messageInput, messageError, 'Message');
 
-    // --------------------
-    // Form Submission
-    // --------------------
-    form.addEventListener('submit', (e) => {
-        e.preventDefault();
+// --------------------
+// Form Submission
+// --------------------
+form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-        let hasError = false;
-        let firstErrorField = null;
+    let hasError = false;
+    let firstErrorField = null;
 
-        [[firstnameInput, firstnameError, 'First Name'],
-        [lastnameInput, lastnameError, 'Last Name'],
-        [emailInput, emailError, 'Email'],
-        [messageInput, messageError, 'Message']].forEach(([input, errorElement, name]) => {
-            const value = input.value.trim();
-            if (!value) {
-                showFieldError(input, errorElement, `${name} is required`);
-                if (!firstErrorField) firstErrorField = input;
-                hasError = true;
-            } else if (name === 'Email' && !validateEmail(value)) {
-                showFieldError(input, errorElement, 'Please enter a valid email address (e.g., user@example.com)');
-                if (!firstErrorField) firstErrorField = input;
-                hasError = true;
-            } else showFieldValid(input, errorElement);
-        });
+    [[firstnameInput, firstnameError, 'First Name'],
+    [lastnameInput, lastnameError, 'Last Name'],
+    [emailInput, emailError, 'Email'],
+    [messageInput, messageError, 'Message']].forEach(([input, errorElement, name]) => {
+        const value = input.value.trim();
 
-        if (hasError) {
-            if (firstErrorField) firstErrorField.focus();
-            return;
+        if (!value) {
+            showFieldError(input, errorElement, `${name} is required`);
+            if (!firstErrorField) firstErrorField = input;
+            hasError = true;
+        } else if (name === 'Email' && !validateEmail(value)) {
+            showFieldError(input, errorElement, 'Please enter a valid email address (e.g., user@example.com)');
+            if (!firstErrorField) firstErrorField = input;
+            hasError = true;
+        } else {
+            showFieldValid(input, errorElement);
+        }
+    });
+
+    if (hasError) {
+        if (formFeedback) {
+            formFeedback.textContent = 'Please fix the errors in the form before submitting.';
         }
 
-        // Store form data
-        const formData = {
-            firstname: firstnameInput.value.trim(),
-            lastname: lastnameInput.value.trim(),
-            email: emailInput.value.trim(),
-            message: messageInput.value.trim()
-        };
-        localStorage.setItem('formSubmission', JSON.stringify(formData));
+        if (firstErrorField) firstErrorField.focus();
+        return;
+    }
 
-        // Redirect to a "thank you" page
-        window.location.href = 'submit-form.html';
-    });
+    // Store form data
+    const formData = {
+        firstname: firstnameInput.value.trim(),
+        lastname: lastnameInput.value.trim(),
+        email: emailInput.value.trim(),
+        message: messageInput.value.trim()
+    };
+
+    localStorage.setItem('formSubmission', JSON.stringify(formData));
+
+    if (formFeedback) {
+    formFeedback.textContent = 'Your message was successfully submitted! Thank you for reaching out.';
+    }
+
+
+// clear the form after successful submission
+form.reset();
+
+// remove validation states
+[firstnameInput, lastnameInput, emailInput, messageInput].forEach(input => {
+    input.removeAttribute('aria-invalid');
+});
+
+// clear error messages
+[firstnameError, lastnameError, emailError, messageError].forEach(error => {
+    error.textContent = '';
+});
+});
 
     // --------------------
     // Discard / Reset

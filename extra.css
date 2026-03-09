@@ -2,7 +2,9 @@
 
     /* accents */
     --primary-light: #E698BC;
-    --primary-accent: #943E65;
+    --primary-old: #943E65;
+    --primary-accessible: #962f5e;
+    --primary-accent: #833357;
     --primary-dark: #7A224A;
 
     --secondary-light: #FFFCF8;

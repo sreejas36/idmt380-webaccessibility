@@ -2,7 +2,9 @@
 
     /* accents */
     --primary-light: #E698BC;
-    --primary-accent: #943E65;
+    --primary-old: #943E65;
+    --primary-accessible: #962f5e;
+    --primary-accent: #833357;
     --primary-dark: #7A224A;
 
     --secondary-light: #FFFCF8;
@@ -724,3 +726,16 @@ label {
     font-size: clamp(1.75rem, 3.5vw, 2.25rem);
 }
 
+
+
+/* FORM */
+
+#form-feedback {
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 2px solid red;
+}
