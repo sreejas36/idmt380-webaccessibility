@@ -3,7 +3,7 @@
 <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sreeja Satish's Portfolio</title>
+        <title>Contact Form</title>
         <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
         <link rel="stylesheet" href="form.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -55,71 +55,73 @@ Feedback for submit form
 Remove skip -->
 
         <main id="main">
-                <h1>Contact Me!</h1>
+                <h1>Contact Sreeja!</h1>
                 <h2 class="message">Don't be shy, let's chat!</h2>
 
                 <form id="contact-form" action="#" method="post" novalidate>
                 <fieldset>
-                <legend class="sr-only">Contact Form</legend>
+                <legend class="sr-only">Contact Information</legend>
 
-                <!-- First Name -->
-                <label for="firstname">
-                First Name*
-                <input
-                        type="text"
-                        id="firstname"
-                        name="firstname"
-                        autocomplete="given-name"
-                        required
-                        aria-describedby="firstname-error"
-                />
-                </label>
-                <p id="firstname-error" role="alert" aria-live="polite"></p>
+                <section class="form-fields">
+                        <!-- First Name -->
+                        <label for="firstname">
+                                What's your first name? *
+                                <input
+                                        type="text"
+                                        id="firstname"
+                                        name="firstname"
+                                        autocomplete="given-name"
+                                        required
+                                        aria-describedby="firstname-error"
+                                />
+                        </label>
+                        <p class="error-message" id="firstname-error" role="alert" aria-live="polite"></p>
+                </section>
 
                 <!-- Last Name -->
                 <label for="lastname">
-                Last Name*
-                <input
-                        type="text"
-                        id="lastname"
-                        name="lastname"
-                        autocomplete="family-name"
-                        required
-                        aria-describedby="lastname-error"
-                />
+                        What's your last name? *
+                        <input
+                                type="text"
+                                id="lastname"
+                                name="lastname"
+                                autocomplete="family-name"
+                                required
+                                aria-describedby="lastname-error"
+                        />
                 </label>
-                <p id="lastname-error" role="alert" aria-live="polite"></p>
+                <p class="error-message" id="lastname-error" role="alert" aria-live="polite"></p>
 
                 <!-- Email -->
                 <label for="email">
-                Email*
-                <input
-                        type="email"
-                        id="email"
-                        name="email"
-                        autocomplete="email"
-                        required
-                        aria-describedby="email-error"
-                />
+                        What's your email? *
+                        <input
+                                type="email"
+                                id="email"
+                                name="email"
+                                autocomplete="email"
+                                required
+                                aria-describedby="email-error"
+                        />
                 </label>
-                <p id="email-error" role="alert" aria-live="polite"></p>
+                <p class="error-message" id="email-error" role="alert" aria-live="polite"></p>
 
                 <!-- Message -->
                 <label for="message">
-                Message*
-                <textarea
-                        id="message"
-                        name="message"
-                        rows="5"
-                        required
-                        aria-describedby="message-error"
-                ></textarea>
-                </label>
-                <p id="message-error" role="alert" aria-live="polite"></p>
+                        Any messages for me? *
+                        <textarea
+                                id="message"
+                                name="message"
+                                rows="3"
+                                required
+                                aria-describedby="message-error"
+                        ></textarea>
+                        </label>
+                <p class="error-message" id="message-error" role="alert" aria-live="polite"></p>
 
                 <button type="submit">Send Message!</button>
                 <button type="button" id="discard-btn">Discard</button>
-                <p id="form-feedback" role="status" aria-live="polite"></p>
+                <p class="error-message" id="form-feedback" role="status" aria-live="polite"></p>
                 </fieldset>
                 </form>
 

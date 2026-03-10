@@ -726,31 +726,8 @@ footer {
 }
 
 
-form{
-    display: flex;
-}
-
-label {
-    font-family: var(--cutive);
-    font-size: clamp(1.75rem, 3.5vw, 2.25rem);
-}
 
 
-
-
-
-input[aria-invalid="true"],
-textarea[aria-invalid="true"] {
-  border: 2px solid red; /* optional, highlights the input */
-}
-
-p[role="alert"] {
-  color: red;       /* red text for errors */
-  font-weight: bold; /* optional to make it stand out */
-  margin-top: 0.25em;
-  margin-bottom: 1em;
-  font-family: var(--cantarell);
-}
 
 /* FORM */
 
@@ -762,10 +739,15 @@ button {
     font-family: var(--cantarell);
     border: 2px solid var(--primary-accent);
     border-radius: 3rem;
-    padding: 0.5rem;
+    padding: 0.75rem;
     display: inline-block;
     text-align: center;
     transition: transform 0.3s ease;
+    width: 15rem;
+    font-size: clamp(0.75rem, 3.5vw, 1rem);
+    align-items: center;
+    margin: 0.25rem auto;
+    maar
 }
 
 
@@ -807,4 +789,77 @@ main {
 .message{
     font-family: var(--cutive);
     font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+    margin: 0;
+}
+
+form{
+    display: flex;
+}
+
+.form-fields {
+    margin: 0.2rem;
+}
+
+label {
+    font-family: var(--cantarell);
+    font-size: clamp(1rem, 3.5vw, 1.25rem);
+    display: flex;
+    flex-direction: column;
+    margin: 0.25rem;
+    max-width: 30rem;
+}
+
+
+input[aria-invalid="true"],
+textarea[aria-invalid="true"] {
+  border: 2px solid var(--error-dark); /* optional, highlights the input */
+}
+
+p[role="alert"] {
+    color: var(--error-dark);       /* red text for errors */
+    margin-top: 0.25em;
+    margin-bottom: 1em;
+    font-family: var(--cantarell);
+    font-size: clamp(0.5rem, 3.5vw, 0.75rem);
+    margin-top: -0.5rem;
+    display: block;
+    min-height: 1.25rem;
+    margin:0.25rem;
+
+}
+
+fieldset {
+    border: none;
+    display: flex;
+    flex-direction: column;
+    width: 30rem;
+}
+
+input {
+    max-width: 30rem;
+    font-family: var(--cantarell);
+    border: 0.5px solid #000000;
+    border-radius: 0.5rem;
+}
+
+textarea{
+    border: 0.5px solid #000000;
+    border-radius: 0.75rem;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+
+.error-message{
+    margin: auto;
 }

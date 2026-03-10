@@ -33,8 +33,9 @@
         if (!input) return;
 
         const getErrorMessage = (isEmpty) => {
-            if (isEmpty) return `${fieldName} is required`;
-            if (fieldName === 'Email') return 'Please enter a valid email address (e.g., user@example.com)';
+            if (isEmpty) return `${fieldName} is required!`;
+            if (fieldName === 'Email') return 'Please enter a valid email address';
+            if (fieldName === 'First Name') return 'Hey, who are you?';
             return null;
         };
 
@@ -80,7 +81,7 @@ form.addEventListener('submit', (e) => {
             if (!firstErrorField) firstErrorField = input;
             hasError = true;
         } else if (name === 'Email' && !validateEmail(value)) {
-            showFieldError(input, errorElement, 'Please enter a valid email address (e.g., user@example.com)');
+            showFieldError(input, errorElement, 'Please enter a valid email address ');
             if (!firstErrorField) firstErrorField = input;
             hasError = true;
         } else {
