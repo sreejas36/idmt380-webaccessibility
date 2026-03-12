@@ -739,3 +739,53 @@ input[aria-invalid="true"],
 textarea[aria-invalid="true"] {
   border: 2px solid red;
 }
+
+
+
+
+/* GALLERY PAGE */
+
+.gallery {
+    padding: 0rem 4rem;
+}
+.gallery-intro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+    margin-top: 5rem;
+    margin-left: 5rem;
+    margin-right: 5rem;
+    margin: 0 200px;
+}
+
+.gallery-text {
+    display: block;
+    align-self: center;
+    text-align: center;
+}
+
+.gallery-intro img{
+    border-radius: 2rem;
+}
+
+.image-container {
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.image-container img {
+    width: 100%;
+    display: block;
+}
+
+.masonry-gallery {
+    column-count: 3; /* Number of columns in the masonry */
+    column-gap: 20px; /* Space between columns */
+    padding: auto;
+}
+
+.masonry-gallery img {
+    width: 100%;
+    margin-bottom: 15px; /* Space between rows */
+    display: block;
+}
