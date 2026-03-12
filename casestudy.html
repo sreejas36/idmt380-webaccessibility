@@ -5,59 +5,119 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Sreeja Satish's Portfolio</title>
         <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
-        <link rel="stylesheet" href="/aria.css">
+        <link rel="stylesheet" href="aria.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
 </head>
 
-<!-- updated March 2026 -->
-<!-- IDM T380 Web Accessibility -->
 
-<body>
-        <a href="#main" class="skip-link">
-                Skip to main content 
-        </a>
+    <body id="top">
+            <a href="#main" class="skip-link">
+                    Skip to main content 
+            </a>
 
-<header aria-label="Primary Navigation with Logo">
-        <nav aria-label="Primary Navigation">
-                <a href="index.html" class="logo" aria-label="Lotus Logo">
-                        <picture>
-                                <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
-                                <img src="/assets/logo-black.png" alt="lotus logo" height="50">
-                        </picture>
-                </a>
+    <header aria-label="Primary Navigation with Logo">
+            <nav aria-label="Primary Navigation">
+                    <a href="index.html" class="logo" aria-label="Lotus Logo">
+                            <picture>
+                                    <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
+                                    <img src="/assets/logo-black.png" alt="lotus logo" height="50">
+                            </picture>
+                    </a>
 
-                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-                <label
-                        for="menu-toggle"
-                        class="hamburger"
-                        aria-label="Open navigation menu"
-                        aria-controls="primary-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                </label>
+                    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+                    <label
+                            for="menu-toggle"
+                            class="hamburger"
+                            aria-label="Open navigation menu"
+                            aria-controls="primary-menu">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                    </label>
 
-                <ul class="menu" aria-label="Primary Navigation Pages">
-                        <li aria-label="Projects"><a href="index.html">projects</a></li>
-                        <span aria-hidden="true">⟡</span>
-                        <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
-                        <span aria-hidden="true">⟡</span>
-                        <li aria-label="About"><a href="contact.html">contact</a></li>
-                        <span aria-hidden="true">⟡</span>
-                        <li aria-label="Case Study"><a href="casestudy.html">case study</a></li>
-                </ul>
-        </nav>
-</header>
+                    <ul class="menu" aria-label="Primary Navigation Pages">
+                            <li aria-label="Projects"><a href="index.html">projects</a></li>
+                            <span aria-hidden="true">⟡</span>
+                            <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
+                            <span aria-hidden="true">⟡</span>
+                            <li aria-label="About"><a href="contact.html">contact</a></li>
+                            <span aria-hidden="true">⟡</span>
+                            <li aria-label="Case Study"><a href="casestudy.html">case study</a></li>
+                    </ul>
+            </nav>
+    </header>
 
 
+        <main id="main-content">
 
+            <section class="hero-image" aria-label="Hero Image of Final Project">
+                <img src="assets/light-mode.png" alt="Hero Image of Light Mode">
+            </section>
 
-        <main id="main">
+            <section>
+                <h1>Web Accessibility Case Study</h1>
+            </section>
+            <!-- Overview -->
+            <section class="overview" aria-labelledby="overview-heading">
+                <h2 id="overview-heading">Overview</h2>
+                <p><!-- Executive summary: key takeaways, problem, solution, results --></p>
+            </section>
 
+            <!-- Context and Challenge -->
+            <section class="context-challenge" aria-labelledby="context-heading">
+                <h2 id="context-heading">Context and Challenge</h2>
+
+                <h3>Background / Description / Timeline / Purpose</h3>
+                <p><!-- Project background, timeline, purpose, etc. --></p>
+
+                <h3>The Problem</h3>
+                <p><!-- What problem does this project solve? --></p>
+
+                <h3>Goals & Objectives</h3>
+                <p><!-- Metrics and goals for success --></p>
+
+                <h3>Role / Team</h3>
+                <p><!-- Solo or team project, your role and contributions --></p>
+            </section>
+
+            <!-- Process and Insight -->
+            <section class="process-insight" aria-labelledby="process-heading">
+                <h2 id="process-heading">Process and Insight</h2>
+
+                <h3>Target Audience / User Personas</h3>
+                <p><!-- Describe audience and personas --></p>
+
+                <h3>User Journeys</h3>
+                <p><!-- Include flows and journeys --></p>
+
+                <h3>Design Sketches / Wireframes</h3>
+                <p><!-- Describe or link sketches/wireframes --></p>
+
+                <h3>Style Guide / Prototypes / Code / UX Testing</h3>
+                <p><!-- Any design systems, prototypes, testing notes --></p>
+            </section>
+
+            <!-- Solution -->
+            <section class="solution" aria-labelledby="solution-heading">
+                <h2 id="solution-heading">Solution</h2>
+                <p><!-- Show off final design, images, videos, live link, features, UX highlights --></p>
+            </section>
+
+            <!-- Results -->
+            <section class="results" aria-labelledby="results-heading">
+                <h2 id="results-heading">Results</h2>
+                <p><!-- Success metrics, qualitative/quantitative outcomes, lessons learned, testimonials --></p>
+            </section>
 
         </main>
+
+
+            <main id="main">
+
+
+            </main>
 
 
         <footer aria-label="Portfolio Footer">
@@ -68,7 +128,7 @@
                 </section>
                 
                 <section class="footer-links" aria-label="Social Media Links">
-                        <a href="#top" class="skip-link-2">Skip Back to Top</a>
+                        <a href="#top" class="skip-link-2"> Back to Top</a>
                         <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
                         LinkedIn
                         </a>

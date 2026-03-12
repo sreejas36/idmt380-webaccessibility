@@ -129,6 +129,10 @@ main {
     color: var(--dark-text);
 }
 
+.main-content {
+    display: flex;
+    justify-content: center;
+}
 
 figure {
     margin: 0;
@@ -978,3 +982,10 @@ figcaption{
 
 }
 
+
+
+
+/* CASE STUDY */
+.case-study {
+    padding: 0rem 4rem;
+}
