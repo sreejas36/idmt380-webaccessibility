@@ -1,93 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Sreeja Satish's Portfolio</title>
-        <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
-        <link rel="stylesheet" href="/aria.css">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sreeja Satish's Portfolio</title>
+    <link rel="shortcut icon" type="image/webp" href="/assets/favicon.png">
+    <link rel="stylesheet" href="/aria.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
 </head>
+<body id="top">
 
-<!-- updated January 2026 -->
-<!-- IDM T380 Web Accessibility -->
+    <a href="#main" class="skip-link">Skip to main content</a>
 
-<body>
-        <a href="#main" class="skip-link">
-                Skip to main content 
-        </a>
-
-<header aria-label="Primary Navigation with Logo">
+    <header aria-label="Primary Navigation with Logo">
         <nav aria-label="Primary Navigation">
-                <a href="index.html" class="logo" aria-label="Lotus Logo">
-                        <img src="/assets/logo-black.png" alt="lotus logo" height="50">
-                </a>
+            <a href="index.html" class="logo" aria-label="Lotus Logo">
+                <picture>
+                    <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
+                    <img src="/assets/logo-black.png" alt="Lotus logo" height="50">
+                </picture>
+            </a>
 
-                <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-                <label
-                        for="menu-toggle"
-                        class="hamburger"
-                        aria-label="Open navigation menu"
-                        aria-controls="primary-menu">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                </label>
+            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+            <label for="menu-toggle" class="hamburger" aria-label="Open navigation menu" aria-controls="primary-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </label>
 
-                <ul class="menu" aria-label="Primary Navigation Pages">
-                        <li aria-label="Projects"><a href="index.html">projects</a></li>
-                        <span aria-hidden="true">⟡</span>
-                        <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
-                        <span aria-hidden="true">⟡</span>
-                        <li aria-label="About"><a href="form.html">about</a></li>
-                </ul>
+            <ul class="menu" aria-label="Primary Navigation Pages">
+                <li><a href="index.html">Projects</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="casestudy.html">Case Study</a></li>
+            </ul>
         </nav>
-</header>
+    </header>
 
-
-
-        <main id="main">
-
-        <section class="gallery">
-                <div class="gallery-intro">
-                <img src="assets/photography/ganapathi.webp" alt="Ganapathi" width="200px">
+    <main id="main">
+        <section class="gallery" aria-label="Sreeja's Photography Gallery">
+            <div class="gallery-intro">
+                <img src="assets/photography/ganapathi.webp" alt="Ganapathi" aria-label="Hindu God in front of Lamp">
                 <div class="gallery-text">
-                        <h1>Sreeja's Gallery</h1>
-                        <h4 class="quote">photographer, writer, dreamer;<br> a collection of my journey, seeing the world through my eyes</h4>
+                    <h1>Sreeja's Gallery</h1>
+                    <h4 class="quote" aria-label="Introduction of collection">
+                        photographer, writer, dreamer;<br> a collection of my journey, seeing the world through my eyes
+                    </h4>
                 </div>
-                </div>
+            </div>
 
-                <div class="masonry-gallery">
-                <img src="assets/photography/a-gilded-room.webp"  alt="A Gilded Room">
-                <img src="assets/photography/diana-pma.webp" alt="Diana">
-                <img src="assets/photography/city-hall.png" alt="City Hall">
-                <img src="assets/photography/clocks.webp" alt="clocks">
-                <img src="assets/photography/diamonds-and-shadows.webp" alt="Diamonds and Shadows">
-                <img src="assets/photography/divided.png" alt="Divided">
-                <img src="assets/photography/embarcadero.webp" alt="Embarcadero">
-                <img src="assets/photography/framed-tower.webp" alt="Framed Tower">
+            <div class="masonry-gallery"> 
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/a-gilded-room.webp" alt="Ornate gilded interior room with chandeliers">
+                    <figcaption>A Gilded Room</figcaption>
+                </figure>
 
-                <img src="assets/photography/glowing-flora.webp" class="landscape" alt=" Glowing Flora">
-                <img src="assets/photography/pushpanjali.webp" alt="Pushpanjali">
-                <img src="assets/photography/sunlit-flowers.webp" alt="Sunlit Flowers">
-                
-                <img src="assets/photography/heart_leaf.webp" alt="Heart Leaf">
-                <img src="assets/photography/journey-forward.webp" alt="Journey Forward">
-                <img src="assets/photography/pma-complements.webp" alt="PMA Complements">
-                <img src="assets/photography/spiral_quote.webp" alt="Spiral Quote">
-                <img src="assets/photography/stained-glass.webp" alt="Stained Glass">
-                <img src="assets/photography/sunspotted-san-francisco-2.webp" alt="San Fran City">
-                <img src="assets/photography/tilted.webp" alt="Tilted">
-                <img src="assets/photography/sunspotted-san-francisco.webp" alt="San Fran">
-                <img src="assets/photography/sunset-philly.png" alt="Sunset on the Philly Skyline">
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/diana-pma.webp" alt="Diana statue at the Philadelphia Museum of Art">
+                    <figcaption>Diana</figcaption>
+                </figure>
 
-                </div>
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/city-hall.png" alt="Philadelphia City Hall architecture">
+                    <figcaption>City Hall</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/clocks.webp" alt="California clock tower">
+                    <figcaption>Clocks</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/diamonds-and-shadows.webp" alt="String of diamonds and shadows refracting light">
+                    <figcaption>Diamonds and Shadows</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/divided.png" alt="Stone building perfectly divided by shadow">
+                    <figcaption>Divided</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/embarcadero.webp" alt="Embarcadero framed by palm trees">
+                    <figcaption>Embarcadero</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/framed-tower.webp" alt="Tower framed by architecture">
+                    <figcaption>Framed Tower</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/glowing-flora.webp" alt="Close-up of glowing flora">
+                    <figcaption>Glowing Flora</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/pushpanjali.webp" alt="Traditional Pushpanjali ceremony flowers upon mailanji hands">
+                    <figcaption>Pushpanjali</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/sunlit-flowers.webp" alt="Sunlit flowers in bloom">
+                    <figcaption>Sunlit Flowers</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/heart_leaf.webp" alt="Leaf shaped like a heart">
+                    <figcaption>Heart Leaf</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/journey-forward.webp" alt="End of the trolley line centered between street buildings">
+                    <figcaption>Journey Forward</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/pma-complements.webp" alt="Philadelphia Museum of Art highlighting complementary colors">
+                    <figcaption>PMA Complements</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/spiral_quote.webp" alt="The true artist helps the world by revealing mystic truths">
+                    <figcaption>Spiralized Mystic Truths</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/stained-glass.webp" alt="Colorful stained glass tower window">
+                    <figcaption>Stained Glass</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/sunspotted-san-francisco-2.webp" alt="San Francisco cityscape with sunlight spots upon the water">
+                    <figcaption>San Fran City</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/tilted.webp" alt="Tilted perspective of a building in the city">
+                    <figcaption>Tilted</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/sunspotted-san-francisco.webp" alt="San Francisco waterfront with bridge">
+                    <figcaption>Bridge Over Water</figcaption>
+                </figure>
+
+                <figure class="gallery-item" tabindex="0">
+                    <img src="assets/photography/sunset-philly.png" alt="Sunset over the Philadelphia skyline">
+                    <figcaption>Sunset on Philly</figcaption>
+                </figure>
+            </div>
         </section>
-
-        </main>
-
+    </main>
 
         <footer aria-label="Portfolio Footer">
                 <section class="connection">
@@ -97,7 +163,7 @@
                 </section>
                 
                 <section class="footer-links" aria-label="Social Media Links">
-                        <a href="#top" class="skip-link-2">Skip Back to Top</a>
+                        <a href="#top" class="skip-link-2"> Back to Top</a>
                         <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
                         LinkedIn
                         </a>
