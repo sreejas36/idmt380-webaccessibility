@@ -22,7 +22,10 @@
 <header aria-label="Primary Navigation with Logo">
         <nav aria-label="Primary Navigation">
                 <a href="index.html" class="logo" aria-label="Lotus Logo">
-                        <img src="/assets/logo-black.png" alt="lotus logo" height="50">
+                        <picture>
+                        <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
+                        <img src="/assets/logo-black.png" alt="Lotus logo" height="50">
+                        </picture>
                 </a>
 
                 <input type="checkbox" id="menu-toggle" class="menu-toggle" />
