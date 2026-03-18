@@ -12,42 +12,42 @@
 </head>
 
 
-    <body id="top">
-            <a href="#main" class="skip-link">
-                    Skip to main content 
-            </a>
+<body id="top">
+        <a href="#main" class="skip-link">
+                Skip to Main Content 
+        </a>
 
-    <header aria-label="Primary Navigation with Logo">
-            <nav aria-label="Primary Navigation">
-                    <a href="index.html" class="logo" aria-label="Lotus Logo">
-                            <picture>
-                                    <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
-                                    <img src="/assets/logo-black.png" alt="lotus logo" height="50">
-                            </picture>
-                    </a>
+        <header aria-label="Primary Navigation with Logo">
+                <nav aria-label="Primary Navigation">
+                        <a href="index.html" class="logo" aria-label="Lotus Logo">
+                                <picture>
+                                        <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
+                                        <img src="/assets/logo-black.png" alt="lotus logo" height="50">
+                                </picture>
+                        </a>
+                        
+                        <button 
+                                class="hamburger"
+                                aria-label="Open navigation menu"
+                                aria-controls="primary-menu"
+                                aria-expanded="false">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </button>
 
-                    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-                    <label
-                            for="menu-toggle"
-                            class="hamburger"
-                            aria-label="Open navigation menu"
-                            aria-controls="primary-menu">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                    </label>
+                        <ul class="menu" id="primary-menu" aria-label="Primary Navigation Pages">
+                                <li aria-label="Projects"><a href="index.html">projects</a></li>
+                                <span aria-hidden="true">⟡</span>
+                                <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
+                                <span aria-hidden="true">⟡</span>
+                                <li aria-label="About"><a href="contact.html">contact</a></li>
+                                <span aria-hidden="true">⟡</span>
+                                <li aria-label="Case Study"><a href="casestudy.html">case study</a></li>
+                        </ul>
+                </nav>
+        </header>
 
-                    <ul class="menu" aria-label="Primary Navigation Pages">
-                            <li aria-label="Projects"><a href="index.html">projects</a></li>
-                            <span aria-hidden="true">⟡</span>
-                            <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
-                            <span aria-hidden="true">⟡</span>
-                            <li aria-label="About"><a href="contact.html">contact</a></li>
-                            <span aria-hidden="true">⟡</span>
-                            <li aria-label="Case Study"><a href="casestudy.html">case study</a></li>
-                    </ul>
-            </nav>
-    </header>
 
 
         <main id="main-content">
@@ -128,7 +128,7 @@
                 </section>
                 
                 <section class="footer-links" aria-label="Social Media Links">
-                        <a href="#top" class="skip-link-2"> Back to Top</a>
+                        <a href="#top" class="skip-link-2"> Skip Footer</a>
                         <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
                         LinkedIn
                         </a>
@@ -147,6 +147,8 @@
                 Ⓒ 2025 Sreeja Satish
                 </section>
         </footer>
-
 </body>
+
+<script src="nav.js"></script>
+
 </html>

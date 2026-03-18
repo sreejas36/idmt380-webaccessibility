@@ -10,34 +10,42 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cantarell:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Upright:wght@300;400;500;600;700&family=Cutive&display=swap" rel="stylesheet">
 </head>
+
 <body id="top">
+        <a href="#main" class="skip-link">
+                Skip to Main Content 
+        </a>
 
-    <a href="#main" class="skip-link">Skip to main content</a>
+        <header aria-label="Primary Navigation with Logo">
+                <nav aria-label="Primary Navigation">
+                        <a href="index.html" class="logo" aria-label="Lotus Logo">
+                                <picture>
+                                        <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
+                                        <img src="/assets/logo-black.png" alt="lotus logo" height="50">
+                                </picture>
+                        </a>
+                        
+                        <button 
+                                class="hamburger"
+                                aria-label="Open navigation menu"
+                                aria-controls="primary-menu"
+                                aria-expanded="false">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                        </button>
 
-    <header aria-label="Primary Navigation with Logo">
-        <nav aria-label="Primary Navigation">
-            <a href="index.html" class="logo" aria-label="Lotus Logo">
-                <picture>
-                    <source srcset="/assets/logo-white.png" media="(prefers-color-scheme: dark)">
-                    <img src="/assets/logo-black.png" alt="Lotus logo" height="50">
-                </picture>
-            </a>
-
-            <input type="checkbox" id="menu-toggle" class="menu-toggle" />
-            <label for="menu-toggle" class="hamburger" aria-label="Open navigation menu" aria-controls="primary-menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </label>
-
-            <ul class="menu" aria-label="Primary Navigation Pages">
-                <li><a href="index.html">Projects</a></li>
-                <li><a href="gallery.html">Gallery</a></li>
-                <li><a href="contact.html">Contact</a></li>
-                <li><a href="casestudy.html">Case Study</a></li>
-            </ul>
-        </nav>
-    </header>
+                        <ul class="menu" id="primary-menu" aria-label="Primary Navigation Pages">
+                                <li aria-label="Projects"><a href="index.html">projects</a></li>
+                                <span aria-hidden="true">⟡</span>
+                                <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
+                                <span aria-hidden="true">⟡</span>
+                                <li aria-label="About"><a href="contact.html">contact</a></li>
+                                <span aria-hidden="true">⟡</span>
+                                <li aria-label="Case Study"><a href="casestudy.html">case study</a></li>
+                        </ul>
+                </nav>
+        </header>
 
     <main id="main">
         <section class="gallery" aria-label="Sreeja's Photography Gallery">
@@ -163,7 +171,7 @@
                 </section>
                 
                 <section class="footer-links" aria-label="Social Media Links">
-                        <a href="#top" class="skip-link-2"> Back to Top</a>
+                        <a href="#top" class="skip-link-2"> Skip Footer</a>
                         <a href="https://www.linkedin.com/in/sreejasatish/" class="links" target="_blank">
                         LinkedIn
                         </a>
@@ -184,4 +192,7 @@
         </footer>
 
 </body>
+
+<script src="nav.js"></script>
+
 </html>
