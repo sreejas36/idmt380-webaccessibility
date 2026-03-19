@@ -232,10 +232,9 @@ img {
     outline-offset: 5px;  
 } */
 
-
 .skip-link-2 {
     position: absolute;
-    right: 1rem;
+    right: 0rem;
     bottom: -0rem; /* hide it below the page */
     background: var(--primary-accessible);
     color: var(--primary-accessible);
@@ -245,9 +244,10 @@ img {
 }
 
 .skip-link-2:focus {
-    bottom: 1rem; /* bring it into view */
+    bottom: 0rem; /* bring it into view */
     outline: 3px solid var(--light-background);
-    color: var(--light-text);
+    color: var(--primary-accessible);
+    background-color: var(--light-background);
     border-radius: 0rem 2rem 0rem 2rem;
     outline-offset: 5px;
 }
