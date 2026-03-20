@@ -41,7 +41,7 @@
                                 <span aria-hidden="true">⟡</span>
                                 <li aria-label="Gallery"><a href="gallery.html">gallery</a></li>
                                 <span aria-hidden="true">⟡</span>
-                                <li aria-label="About"><a href="contact.html">contact</a></li>
+                                <li aria-label="Contact"><a href="contact.html">contact</a></li>
                                 <span aria-hidden="true">⟡</span>
                                 <li aria-label="Case Study"><a href="casestudy.html">case study</a></li>
                         </ul>
@@ -51,7 +51,11 @@
         <main id="main">
             <section class="case-study">
                 <figure class="hero-image" aria-label="Hero Image of Final Project">
-                    <img src="assets/light-mode.png" alt="Hero Image of Light Mode">
+                    <!-- <img src="assets/light-mode.png" alt="Hero Image of Light Mode"> -->
+                    <picture>
+                        <source srcset="/assets/light-mode.png" media="(prefers-color-scheme: dark)">
+                        <img src="/assets/dark-mode.png" alt="lotus logo" height="50">
+                    </picture>
                 </figure>
                 <h1 class="big-title">Optimizing My Portfolio Website for Web Accessibility</h1>
                 <section class="cs-intro" aria-label="Case Study Overview">

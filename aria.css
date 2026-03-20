@@ -114,16 +114,6 @@ body {
     min-height: 100vh;
 }
 
-/* @media (prefers-color-scheme: dark) {
-  /* Styles for dark mode users */
-    /* main {
-        background-color: var(--dark-background);
-        color: #ffffff;
-    }
-    .hamburger span{
-    background-color: var(--light-background);
-    } 
-}*/
 
 main {
     color: var(--dark-text);
@@ -180,71 +170,36 @@ img {
     left: 0;
     background: var(--dark-background);
     color: var(--light-text);
+    font-size: clamp(1rem, 2vw, 1.15rem);
     padding: 0.5rem;
     z-index: 100;
     font-family: var(--cantarell);
     }
 
 .skip-link:focus { 
-    top: 0;
+    top: 0.5rem;
+    left: 0.5rem;
     outline: 3px solid var(--primary-accessible);
     border-radius: 0rem 2rem 0rem 2rem;
     outline-offset: 5px;  
 }
 
-/* .skip-link-2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    transform: translateY(100%);
-    background: var(--light-background);
-    color: var(--dark-text);
-    padding: 0.5rem;
-    z-index: 100;
-    font-family: var(--cantarell);
-    transition: transform 0.3s ease;
-    border-radius: 0rem 2rem 0rem 2rem;
-    } */
-    /* use for back to top while scrolling
-    position: fixed;
-    bottom: 0;
-    right: 0;
-    transform: translateY(100%);
-    background: var(--light-background);
-    color: var(--dark-text);
-    padding: 0.5rem;
-    z-index: 100;
-    font-family: var(--cantarell);
-    transition: transform 0.3s ease;
-    border-radius: 0rem 2rem 0rem 2rem; */
-
-    /* background: var(--light-background);
-    color: var(--dark-text);
-    border: 3px solid var(--primary-accessible);
-    border-radius: 0rem 2rem 0rem 2rem;
-    padding: 0.5rem;
-    z-index: 100;
-    font-family: var(--cantarell); */
-
-/* .skip-link-2:focus { 
-    transform: translateY(0);
-    outline: 3px solid var(--primary-accessible);
-    outline-offset: 5px;  
-} */
 
 .skip-link-2 {
     position: absolute;
     right: 0rem;
-    bottom: -0rem; /* hide it below the page */
+    bottom: -0rem;
     background: var(--primary-accessible);
     color: var(--primary-accessible);
+    font-size: clamp(1.25rem, 2vw, 1.15rem);
     padding: 0.5rem;
     font-family: var(--cantarell);
     z-index: 100;
 }
 
 .skip-link-2:focus {
-    bottom: 0rem; /* bring it into view */
+    bottom: 0.5rem; 
+    right: 0.5rem;
     outline: 3px solid var(--light-background);
     color: var(--primary-accessible);
     background-color: var(--light-background);
@@ -406,10 +361,11 @@ nav {
     cursor: pointer;
     gap: 10px;
     z-index: 1001;
-
     background: none;
     border: none;
     padding: 0;
+    margin: 0;
+    width: 3rem;
 }
 
 .hamburger.open span:nth-child(1) {
@@ -424,26 +380,6 @@ nav {
     transform: rotate(-45deg) translateY(-8px) translateX(8px);
 }
 
-/* .menu-toggle:checked + .hamburger + .menu {
-    max-height: 100vh;
-    padding: 12rem 0;
-    margin-top: 1rem;
-}
-
-.menu-toggle:checked + .hamburger span:nth-child(1) {
-    transform: rotate(45deg) translateY(8px) translateX(8px);
-}
-
-.menu-toggle:checked + .hamburger span:nth-child(2) {
-    opacity: 0;
-}
-
-.menu-toggle:checked + .hamburger span:nth-child(3) {
-    transform: rotate(-45deg) translateY(-8px) translateX(8px);
-
-} */
-
-  /* Optional: hide decorative image on desktop */
 .menu-image {
     display: block;
     width: 100%;
@@ -853,6 +789,148 @@ label {
     }
 
 
+    button {
+        background-color: var(--primary-accessible);
+        color: var(--secondary-accent);
+        border-color: var(--secondary-accent);
+        font-family: var(--cantarell);
+        border: 2px solid var(--primary-accessible);
+        border-radius: 3rem;
+        padding: 0.75rem;
+        display: inline-block;
+        text-align: center;
+        transition: transform 0.3s ease;
+        width: 15rem;
+        font-size: clamp(0.75rem, 3.5vw, 1rem);
+        align-items: center;
+        margin: 0.25rem auto;
+    }
+
+
+    .button-link {
+        display: inline-block;
+        padding: 10px 20px;
+        margin: 10px;
+        color: #fff;
+        background-color: var(--fuchsia);
+        text-decoration: none;
+        border-radius: 30px;
+        font-size: 18px;
+        font-weight: bold;
+        text-align: center;
+        transition: transform 0.3s ease;
+        outline: none;
+    }
+
+    button:hover {
+        background-color: var(--secondary-accent);
+        border-radius: 30px;
+        color: var(--primary-accessible);
+        transform: scale(1.03);
+        transition: transform 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    button:active {
+        transform: scale(1.03);
+    }
+
+
+    #contact-main {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .message{
+        font-family: var(--cutive);
+        font-size: clamp(1.25rem, 3.5vw, 1.5rem);
+        margin: 0;
+    }
+
+    form{
+        display: flex;
+    }
+
+    .form-fields {
+        margin: 0.2rem;
+    }
+
+    label {
+        font-family: var(--cantarell);
+        font-size: clamp(1rem, 3.5vw, 1.25rem);
+        display: flex;
+        flex-direction: column;
+        margin: 0.25rem;
+        max-width: 30rem;
+    }
+
+
+    input[aria-invalid="true"],
+    textarea[aria-invalid="true"] {
+    border: 2px solid var(--error-dark); /* optional, highlights the input */
+    }
+
+    p[role="alert"] {
+        color: var(--error);       /* red text for errors */
+        margin-top: 0.25em;
+        margin-bottom: 1em;
+        font-family: var(--cantarell);
+        font-size: clamp(0.5rem, 3.5vw, 0.75rem);
+        margin-top: -0.5rem;
+        display: block;
+        min-height: 1.25rem;
+        margin:0.25rem;
+
+    }
+
+    fieldset {
+        border: none;
+        display: flex;
+        flex-direction: column;
+        width: 30rem;
+    }
+
+    @media (max-width: 600px) {
+            fieldset {
+                border: none;
+                display: flex;
+                flex-direction: column;
+                width: auto;
+            }
+    }
+
+    input {
+        max-width: 30rem;
+        font-family: var(--cantarell);
+        border: 0.5px solid #000000;
+        border-radius: 0.5rem;
+    }
+
+    textarea{
+        border: 0.5px solid #000000;
+        border-radius: 0.75rem;
+    }
+
+    .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip: rect(0, 0, 0, 0);
+        white-space: nowrap;
+        border: 0;
+    }
+
+
+    .error-message{
+        margin: auto;
+        color: var(--error);       /* red text for errors */
+
+    }
+
+
+
 .gallery {
     padding: 0 4rem;
 }
@@ -1075,3 +1153,7 @@ figcaption{
         margin: auto;
     }
 }
+
+
+
+/* FORM */

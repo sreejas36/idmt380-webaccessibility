@@ -361,7 +361,9 @@ nav {
     transform: scale(1.1);
 }
 
-
+.menu li {
+    margin: auto;
+}
 
 /* Case Study Cards */
 .case-study-section {
