@@ -54,52 +54,60 @@
 
 
         <main id="main">
-                <section class="intro-section" aria-label="Introduction">
-                <article class="intro-text">
-                        <h1>
-                        Hi! I’m Sreeja Satish, <br> an inquisitive designer connecting <br> people to solutions that inspire.
-                        </h1>
-                        <h3 aria-label="Intro Information">
-                        currently studying user experience & interaction design <br> at drexel university
-                        </h3>
-                        <h3 aria-label="Intro Call to Action">come explore some of my work! ↓↓↓</h3>
-                </article>
-                <figure class="intro-image" aria-label="Polaroid Picture of Sreeja">
-                        <img src="/assets/sree-polaroid.png" alt="polaroid picture of me">
-                </figure>
+                <section class="intro-section">
+                        <article class="intro-text">
+                                <h1>
+                                Hi! I’m Sreeja Satish, <br> an inquisitive designer connecting <br> people to solutions that inspire.
+                                </h1>
+                                <h3>
+                                currently studying user experience & interaction design <br> at drexel university
+                                </h3>
+                                <h3>come explore some of my work! ↓↓↓</h3>
+                        </article>
+                        <figure class="intro-image" aria-label="Polaroid Picture of Sreeja">
+                                <img src="/assets/sree-polaroid.png" alt="polaroid picture of me">
+                        </figure>
                 </section>
 
                 <article class="case-study-section" aria-label="Pete's Little Lunch Box Case Study">
-                <section class="case-study-card" id="petes-little-lunch-box">
-                        <section class="cs-card-info" aria-label="Introduction">
-                        <section class="cs-text" aria-label="Pete's Description">
-                                <h2>Pete's Little Lunch Box</h2>
-                                <h3>Streamlining the  ordering experience of Drexel’s Food Trucks <br> through a comprehensive app.</h3>
-                        </section>
-                        <figure class="cs-petes-logo" aria-label="Pete's Logo Repeated 3 Times">
-                                <img src="/assets/case-studies/petes/logo-trio.png" alt="pete's little lunch box logo repeated 3 times">
-                        </figure>
-                        </section>
-                        <figure class="cs-featured-image" aria-label="Featured Image of 3 Mobile App Interface Screens For Petes">
-                        <img src="/assets/case-studies/petes/phones.png" alt="3 mobile app interface screens for pete's little lunch box">
-                        </figure>
-                        <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
-                                <ul>
-                                        <li>UX/UI Design</li>
-                                        <li>Web Development</li>
-                                        <li>UX Research</li>
-                                </ul>
+                        <a href="javascript:void(0)" 
+                                class="case-study-card" 
+                                id="petes-little-lunch-box" 
+                                aria-labelledby="petes-title"
+                                aria-describedby="petes-desc petes-tags">
+                                <section class="cs-card-info" aria-label="Introduction">
+                                <section class="cs-text" aria-label="Pete's Description">
+                                        <h2 id="petes-title">Pete's Little Lunch Box</h2>
+                                        <h3 id="petes-desc">Streamlining the  ordering experience of Drexel’s Food Trucks <br> through a comprehensive app.</h3>
+                                </section>
+                                <figure class="cs-petes-logo" aria-label="Pete's Logo Repeated 3 Times">
+                                        <img src="/assets/case-studies/petes/logo-trio.png" alt="pete's little lunch box logo repeated 3 times">
+                                </figure>
+                                </section>
+                                <figure class="cs-featured-image" aria-label="Featured Image of 3 Mobile App Interface Screens For Petes">
+                                <img src="/assets/case-studies/petes/phones.png" alt="3 mobile app interface screens for pete's little lunch box">
+                                </figure>
+                                <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
+                                        <ul id="petes-tags">
+                                                <li>UX/UI Design</li>
+                                                <li>Web Development</li>
+                                                <li>UX Research</li>
+                                        </ul>
 
-                        </section>
-                </section>
+                                </section>
+                        </a>
                 </article>
 
                 <article class="case-study-section" aria-label="CVS Microinteractions Case Study">
-                        <a href="#" class="case-study-card" id="cvs-microinteractions">
+                        <a href="javascript:void(0)" 
+                                class="case-study-card" 
+                                id="cvs-microinteractions"    
+                                aria-labelledby="cvs-title"
+                                aria-describedby="cvs-desc cvs-tags">
                                 <section class="cs-card-info" aria-label="Introduction">
                                         <section class="cs-text" aria-label="CVS Microinteractions Description">
-                                                <h2>Product Card Microinteractions</h2>
-                                                <h3>Elevating CVS’s product card flow to help you <br> find exactly what you need.</h3>
+                                                <h2 id="cvs-title">Product Card Microinteractions</h2>
+                                                <h3 id="cvs-desc">Elevating CVS’s product card flow to help you <br> find exactly what you need.</h3>
                                         </section>
                                         <figure class="cs-logo" aria-label="CVS Heart Logo">
                                                 <img src="/assets/case-studies/cvs-microinteractions/cvs-heart-logo.png" alt="CVS heart logo">
@@ -111,7 +119,7 @@
                                 </figure>
 
                                 <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
-                                        <ul>
+                                        <ul id="cvs-tags">
                                                 <li>UX/UI Design</li>
                                                 <li>Web Development</li>
                                                 <li>Microinteractions</li>
@@ -122,11 +130,15 @@
 
 
                 <article class="case-study-section" aria-label="Playa Bowls Redesign Case Study">
-                        <a href="#" class="case-study-card" id="sunset-cove">
+                        <a href="javascript:void(0)" 
+                                class="case-study-card" 
+                                id="sunset-cove"
+                                aria-labelledby="sunset-title"
+                                aria-describedby="sunset-desc sunset-tags">
                                 <section class="cs-card-info" aria-label="Introduction">
                                 <section class="cs-text" aria-label="Sunset Cove Description">
-                                        <h2>Sunset Cove Smoothie Bowls</h2>
-                                        <h3>Redesigning the Playa Bowls app interface with <br> meaningful microinteractions in mind.</h3>
+                                        <h2 id="sunset-title">Sunset Cove Smoothie Bowls</h2>
+                                        <h3 id="sunset-desc">Redesigning the Playa Bowls app interface with <br> meaningful microinteractions in mind.</h3>
                                 </section>
                                 <figure class="cs-logo">
                                         <img src="/assets/case-studies/sunset-cove/sunset-cove-logo.png" alt="sunset cove logo of bowl with palm tree and sunset">
@@ -136,7 +148,7 @@
                                 <img src="/assets/case-studies/sunset-cove/sunset-cove-screens.png" alt="3 mobile app interface screens for sunset cove smoothie bowls">
                                 </figure>
                                 <section class="cs-pill-tags" aria-label="Topics and Skills Related to Project">
-                                        <ul>
+                                        <ul id="sunset-tags">
                                                 <li aria-label="UX/UI Design">UX/UI Design</li>
                                                 <li aria-label="Animation">Animation</li>
                                         </ul>
@@ -171,7 +183,7 @@
 
 
                 <section class="copyright" aria-label="Website Copyright">
-                Ⓒ 2025 Sreeja Satish
+                Ⓒ 2026 Sreeja Satish
                 </section>
         </footer>
 
